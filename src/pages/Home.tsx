@@ -100,7 +100,7 @@ const Home: React.FC = () => {
               Many have been left behind because of how they live - LGBTQ, the disabled, many women - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print)</small>
             </li>
             <li>
-              <strong>The correct</strong> - 
+              <strong>The empirically correct</strong> - 
               We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and shit (or something, idk, I'm often incorrect). This would be like that! Sort of.
             </li>
           </ul>
