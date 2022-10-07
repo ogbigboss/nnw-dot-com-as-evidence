@@ -59,7 +59,7 @@ const Home: React.FC = () => {
           component="h2"
         >
           Nice spotlight you got there<br />
-          <small>Shame if someone got in between you twos</small>
+          <small>Shame if something happened to get between you twos</small>
         </Typography>
       </HeroContainer >
       <YakBlock
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
         subHeader="Oh. I guess a system could find a way to take advantage of that."
       />
       <YakBlock
-        header="Oh like a rad cyber dystopia where you use every bite of digital information against me and I outsmarted you because the human brain in the present moment will always be one step ahead of algorithms made by humans in the previous moments preceeding the immediacy of now?"
+        header="Oh, like a rad cyber dystopia where you use every bit of digital information against me and I outsmart you because the human brain in the present moment will always be one step ahead of algorithms made in the moments preceeding the immediacy of now?"
         subHeader="What the f*** is wrong with you? Did something happen to you? No, it's a way to use gaming to help the people in need that our epistemologically absent leaders have made excuses to leave behind. New Noise Works only focuses on elements of the world the management element of our society wouldn't know how to - art, and unfortunately for the Jones' of 2022, business."
         textAlign="right"
         inverted={true}
