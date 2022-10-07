@@ -93,7 +93,7 @@ const Home: React.FC = () => {
             </li>
             <li>
               <strong>The broken hearted</strong> -
-              Mental health shouldn't be a matter of charity, but it isn't something with sufficient support either
+              Mental health, substance abuse, victims of sexual violence -- the symptoms of broken families and societies shouldn't be a matter of charity -- but it isn't something with sufficient support either
             </li>
             <li>
               <strong>The hearted broke</strong> -
@@ -110,7 +110,7 @@ const Home: React.FC = () => {
       <YakBlock
         header="Wait, you don't trust governments and big businesses to handle all that?"
         subHeader={<>
-          I mean, I'm sure they could, I just think team me could do it better is all.<br /><br />A bit of friendly competition couldn't hurt could it?<br /><br />Well, feelings, maybe.
+          I mean, I'm sure they <em>could</em>, I just think "team me" could do it better is all.<br /><br />A bit of friendly competition couldn't hurt could it?<br /><br />Well, feelings, maybe.
         </>}
         textAlign="right"
       />
