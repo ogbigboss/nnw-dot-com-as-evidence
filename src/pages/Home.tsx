@@ -101,7 +101,7 @@ const Home: React.FC = () => {
             </li>
             <li>
               <strong>The empirically correct</strong> - 
-              We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and shit (or something, idk, I'm often incorrect). This would be like that! Sort of.
+              We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** (or something, idk, I'm often incorrect). This would be like that! Sort of.
             </li>
           </ul>
         </>}
