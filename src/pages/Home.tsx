@@ -64,7 +64,7 @@ const Home: React.FC = () => {
       </HeroContainer >
       <YakBlock
         header="New Noise Works is a (perhaps overly earnest) attempt to patch the hole in tomorrow(!)"
-        subHeader={<>Blaming the economy, the system, or Obama is just kind of lazy. Also, it is <em>Important To Be Earnest</em>, otherwise you end up socializing with wannabe royalty when they're kind of lame and you don't want to be there but you put up with it like a play written in the early 1900's. <br /><br />Wilde huh? Mind your tomatoes. Anyway, let's hear it I guess. I'll keep scrolling.</>}
+        subHeader={<>Blaming the economy, the system, or Obama is just kind of lazy. Also, it is <em>Important To Be Earnest</em>, otherwise you end up socializing with wannabe royalty when they're kind of lame and you don't want to be there but you put up with it like a play written in the early 1900's. <br /><br />Wilde huh? Anyway, let's hear it I guess. I'll keep scrolling.</>}
         textAlign="right"
         inverted={true}
       />
