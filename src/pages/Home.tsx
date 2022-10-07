@@ -61,7 +61,7 @@ const Home: React.FC = () => {
           Nice spotlight you got there<br />
           <small>Shame if something happened to get between you twos</small>
         </Typography>
-      </HeroContainer >
+      </HeroContainer>
       <YakBlock
         header="New Noise Works is a (perhaps overly earnest) attempt to patch the hole in tomorrow(!)"
         subHeader={<>Blaming the economy, the system, or Obama is just kind of lazy. Also, it is <em>The Importance Of Being Earnest</em> (sic), otherwise you end up socializing with wannabe royalty when they're kind of lame and you don't want to be there but you put up with it like a play written in the late 1800's. <br /><br />Wilde huh? Or was it some other white guy? Anyway, let's hear it I guess. I'll keep scrolling.</>}
@@ -81,6 +81,38 @@ const Home: React.FC = () => {
       <YakBlock
         header="Wait, which one of us is in big type?"
         subHeader="Who IS in charge around here anyway?"
+      />
+      <YakBlock
+        header="Who would be supported then?"
+        subHeader={<>
+          <p>You'll be able to choose whom to support / how to balance the donation between several groups, falling under the following four suits:</p>
+          <ul>
+            <li>
+              <strong>Vets etc.</strong> -
+              Government workers that the government can't support (any longer, in the moment, "etc.")
+            </li>
+            <li>
+              <strong>The broken hearted</strong> -
+              Mental health shouldn't be a matter of charity, but it isn't something with sufficient support either
+            </li>
+            <li>
+              <strong>The hearted broke</strong> -
+              Many have been left behind because of how they live - LGBTQ, the disabled, many women - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print)</small>
+            </li>
+            <li>
+              <strong>The correct</strong> - 
+              We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and shit (or something, idk, I'm often incorrect). This would be like that! Sort of.
+            </li>
+          </ul>
+        </>}
+        inverted={true}
+      />
+      <YakBlock
+        header="Wait, you don't trust governments and big businesses to handle all that?"
+        subHeader={<>
+          I mean, I'm sure they could, I just think team me could do it better is all.<br /><br />A bit of friendly competition couldn't hurt could it?<br /><br />Well, feelings, maybe.
+        </>}
+        textAlign="right"
       />
     </>
   )

@@ -1,14 +1,13 @@
 import { AppBar, Button, Container, Link, Toolbar, Typography } from '@mui/material'
 
 interface NNWAppBarProps {
-  msg?: number
+  msg?: React.ReactNode | string
 }
 
 const jokes = [
   <>making better things possible by first admitting (admissably) they are indeed possible</>,
   <>not (just) whining about the "other side" since 1986</>,
-  <>now entering an emotionally fascist website! there may be accidents...</>,
-  <>pointing out that failures in leadership meant you were following the wrong people</>
+  <>now entering an emotionally fascist website! there may be accidents...</>
 ]
 
 function getRandomJoke() {
@@ -25,7 +24,7 @@ const NNWAppBar: React.FC<NNWAppBarProps> = ({ msg }) => {
               variant="h6"
               component="h1"
             >
-              New Noise Works - <small><em>{msg ? jokes[msg] : getRandomJoke()}</em></small>
+              New Noise Works - <small><em>{msg || getRandomJoke()}</em></small>
             </Typography>
           </Button>
         </Toolbar>

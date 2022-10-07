@@ -18,7 +18,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar msg={3} />
+      <AppBar msg="pointing out that failures in leadership meant you were following the wrong people" />
       <Home />
       <AppBar />
     </ThemeProvider>
