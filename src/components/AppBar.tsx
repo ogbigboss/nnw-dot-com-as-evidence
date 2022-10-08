@@ -7,7 +7,7 @@ interface NNWAppBarProps {
 const jokes = [
   <>making better things possible by first admitting (admissably) they are indeed possible</>,
   <>not (just) whining about the "other side" since 1986</>,
-  <>now entering an emotionally fascist website! there may be accidents...</>
+  <>now entering an emotionally fascist website! there may be accidents...</>,
 ]
 
 function getRandomJoke() {
