@@ -5,7 +5,7 @@ const Games: React.FC = () => (
     Games of a sort
     {/*  TODO: make this cards with MUI stuff etc */}
     <ol>
-      <li><em>The Promised Land</em> -- try the <a target="_blank" rel="noreferrer" href="http://playthepromisedland.com/">development build</a> today.</li>
+      <li><em>The Promised Land</em> -- a persistent multiplayer pixel art farming game -- try the <a target="_blank" rel="noreferrer" href="http://playthepromisedland.com/">development build</a> today.</li>
       <li><em>Tower Story</em> -- a 3D Tower builder in the spirit of S*mT*w*r with S*ms like elements.</li>
       <li><em>From the Second Person: The Piano Man</em> -- a robo detective story told from the perspective of the second... person?</li>
       <li><em>Voodoo Trolluhnomics</em> -- what happens when everyone else is a data zombie in a cyber dystopia and you're a witch with an analog vibe? You deicide!</li>
