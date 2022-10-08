@@ -21,7 +21,7 @@ const WhatHowWhyNotHuhWhat: React.FC = () => {
       <Item>A good thing in this world</Item>
       <Item>An obvious approach that does no harm</Item>
       <Item>A fecitious argument typically inferring something is incorrect without being specific, framed as a polite question or point of clarification</Item>
-      <Item>A passive aggressive but dominant retort to the non serious aspects of the argument offered against the obvious good thing that does no harm</Item>
+      <Item>A passive aggressive but dominantly dimisive retort to the non serious aspects of the argument offered against the obvious good thing that does no harm</Item>
     </Box>
   </>
 }
