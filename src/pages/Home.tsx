@@ -97,7 +97,7 @@ const Home: React.FC = () => {
             </li>
             <li>
               <strong>The hearted broke</strong> -
-              Many have been left behind because of how they live - LGBTQ, the disabled, many women - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print)</small>
+              Many have been left behind because of how they live - LGBTQ, the disabled, many indigineous, non whites <small>(<span style={{ color: "#777" }}>#</span>notallwhites)</small> and women - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anyone</em>)</small>
             </li>
             <li>
               <strong>The empirically correct</strong> - 
