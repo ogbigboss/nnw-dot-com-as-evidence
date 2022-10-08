@@ -89,7 +89,7 @@ const Home: React.FC = () => {
           <ul>
             <li>
               <strong>Vets etc.</strong> -
-              Government workers that the government can't support (any longer, in the moment, "etc.")
+              Government workers that the government can't support <small>(any longer, in the moment, "etc.")</small>
             </li>
             <li>
               <strong>The broken hearted</strong> -
@@ -97,11 +97,11 @@ const Home: React.FC = () => {
             </li>
             <li>
               <strong>The hearted broke</strong> -
-              Many have been left behind because of how they live - LGBTQ, the disabled, many indigineous, non whites <small>(<span style={{ color: "#777" }}>#</span>notallwhites)</small> and women - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anyone</em>)</small>
+              Many have been left behind because of how they live - LGBTQ <small>(#notallstr8s)</small>, the disabled, many indigineous, non whites <small>(#notallwhites)</small> and non males - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anyone</em>)</small>
             </li>
             <li>
               <strong>The empirically correct</strong> - 
-              We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** (or something, idk, I'm often incorrect). This would be like that! Sort of.
+              We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** <small>(or something, idk, I'm often incorrect)</small>. This would be like that! Sort of.
             </li>
           </ul>
         </>}
