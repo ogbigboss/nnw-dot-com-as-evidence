@@ -1,4 +1,5 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles'
+import styled from '@mui/system/styled'
 import { grey, pink } from '@mui/material/colors'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -43,12 +44,26 @@ const router = createBrowserRouter([
   }
 ])
 
+const SiteContainer = styled('div')({
+  display: "flex",
+  minHeight: "100vh",
+  flexDirection: "column"
+})
+
+const SiteContent = styled('div')({
+  flex: 1
+})
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar msg="pointing out that failures in leadership meant you were following the wrong people" />
-      <RouterProvider router={router} />
-      <AppBar />
+      <SiteContainer>
+        <AppBar msg="failures in leadership meant you were following the wrong people" />
+        <SiteContent>
+          <RouterProvider router={router} />
+        </SiteContent>
+        <AppBar />
+      </SiteContainer>
     </ThemeProvider>
   )
 }
