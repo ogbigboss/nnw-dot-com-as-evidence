@@ -89,7 +89,7 @@ const Home: React.FC = () => {
           <ul>
             <li>
               <strong>Vets etc.</strong> -
-              Government workers that the government can't support <small>(any longer, in the moment, "etc.")</small>
+              Government workers and those formerly detained by the government that the government can't support <small>(any longer, in the moment, "etc.")</small>
             </li>
             <li>
               <strong>The broken hearted</strong> -
