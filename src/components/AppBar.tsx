@@ -27,6 +27,29 @@ const NNWAppBar: React.FC<NNWAppBarProps> = ({ msg }) => {
               New Noise Works - <small><em>{msg || getRandomJoke()}</em></small>
             </Typography>
           </Button>
+          <Button
+            href="/huh-what"
+            component={Link}
+            color="secondary"
+            sx={{
+              ml: 'auto'
+            }}
+          >Details</Button>
+          <Button
+            href="/games"
+            component={Link}
+            color="secondary"
+          >Games</Button>
+          <Button
+            href="/about"
+            component={Link}
+            color="secondary"
+          >Whomst</Button>
+          <Button
+            href="/support"
+            component={Link}
+            color="secondary"
+          >Pay me</Button>
         </Toolbar>
       </Container>
     </AppBar>
