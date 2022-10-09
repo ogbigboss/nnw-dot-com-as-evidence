@@ -9,6 +9,7 @@ import HuhWhat from './pages/WhatHowWhyNotYeahOK'
 import Games from './pages/Games'
 import About from './pages/About'
 import Support from './pages/Support'
+import Potential from './pages/Potential'
 
 const theme = createTheme({
   palette: {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/support",
     element: <Support />
+  },
+  {
+    path: "/potential",
+    element: <Potential />
   }
 ])
 

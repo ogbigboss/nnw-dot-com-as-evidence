@@ -36,6 +36,11 @@ const NNWAppBar: React.FC<NNWAppBarProps> = ({ msg }) => {
             }}
           >Details</Button>
           <Button
+            href="/potential"
+            component={Link}
+            color="secondary"
+          >Potential</Button>
+          <Button
             href="/games"
             component={Link}
             color="secondary"
