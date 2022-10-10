@@ -23,14 +23,16 @@ const GameCardContent = styled(CardContent)({
 })
 
 const FundType = styled(Typography)({
-  fontSize: 14
+  fontSize: 14,
+  color: "green",
+  marginLeft: 16
 })
 
 const gamesData = [{
 	avatarText: "TPL",
 	title: "The Promised Land",
-	subheader: "Playable Dev Build",
-	desc: "A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm now.",
+	subheader: <><a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">Playable</a> Dev Build</>,
+	desc: <>A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm <a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">now</a>.</>,
   funding: "$150k-500k+",
 	details: <>
 		<Typography>Method:</Typography>
@@ -56,7 +58,7 @@ const gamesData = [{
 	avatarText: "TPM",
 	title: "FTSP: The Piano Man",
 	subheader: "Concepting",
-  funding: "$15k-50k+",
+  funding: "$25k-75k+",
 	desc: "A robo detective story told through the second person's POV. Figure out the algorithms before they get in your head!",
 	details: <>
 		<Typography>Method:</Typography>
@@ -69,7 +71,7 @@ const gamesData = [{
 	avatarText: "VTN",
 	title: "Voodoo Trolluhnomics",
 	subheader: "Concepting",
-  funding: "$15k-50k+",
+  funding: "$25k-75k+",
 	desc: "What happens when everyone's a data zombie in a cyber dystopia and you're a witch with an analog vibe? You deicide!",
 	details: <>
 		<Typography>Method:</Typography>
