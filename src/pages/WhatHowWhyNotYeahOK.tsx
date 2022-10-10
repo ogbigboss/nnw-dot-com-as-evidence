@@ -62,7 +62,7 @@ const WhatHowWhyNotHuhWhat: React.FC = () => {
         </Item>
         <Item>
           <ContentType>
-            A passive aggressive but dominantly dimisive retort to the non serious aspects of the argument offered against the obvious good thing that does no harm
+            A passive aggressive but dominantly dismissive retort to the non serious aspects of the argument offered against the obvious good thing that does no harm
           </ContentType>
         </Item>
 
