@@ -54,7 +54,7 @@ const About: React.FC = () => (
       <Typography
         variant="h4"
       >
-        Make video games, for money
+        Make video games, for money, but only within an "indie" budget, for now
       </Typography>
     </HomeContainer>
     <HomeContainerAlt maxWidth="xl">
