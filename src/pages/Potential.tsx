@@ -112,7 +112,7 @@ const choices = [
   },
   {
     title: <>Who would be supported then?</>,
-    subHeader: <>You'll be able to choose whom to support / how to balance the donation between several groups, falling under the following four suits:</>,
+    subHeader: <>You'll be able to choose whom to support and how to balance the donation between several groups, falling under the following four suits:</>,
     subChoices: [
       {
         title: <>Vets etc.:</>,
@@ -122,21 +122,21 @@ const choices = [
         body: <></>
       },
       {
-        title: <>The broken hearted:</>,
+        title: <>The Broken Hearted:</>,
         subHeader: <>
           Mental health, substance abuse, victims of sexual violence -- the symptoms of broken families and societies shouldn't be a matter of charity -- but it isn't something with sufficient support either
         </>,
         body: <></>
       },
       {
-        title: <>The hearted broke:</>,
+        title: <>The Hearted Broke:</>,
         subHeader: <>
             Many have been left behind because of how they live - LGBTQ <small>(#notallstr8s)</small>, the disabled, many indigineous, non whites <small>(#notallwhites)</small> and non males - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anyone</em>)</small>
         </>,
         body: <></>
       },
       {
-        title: <>The empirically correct:</>, 
+        title: <>The Empirically Correct:</>,
         subHeader: <>
           We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** <small>(or something, idk, I'm often incorrect)</small>. This would be like that! Sort of.
         </>,
@@ -152,6 +152,14 @@ const About: React.FC = () => {
   return <>
     <HeroContainer maxWidth="xl">
       <Typography
+        variant="h1"
+        sx={{
+          mb: 8
+        }}
+      >
+        New Noise Works
+      </Typography>
+      <Typography
         variant="h2"
         sx={{
           mb: 8
@@ -159,10 +167,20 @@ const About: React.FC = () => {
       >
         How to Produce a Higher Ground
       </Typography>
+    </HeroContainer>
+    <HomeContainerAlt maxWidth="xl" style={{ textAlign: "left" }}>
+      <Typography
+        variant="h3"
+        sx={{
+          mb: 2
+        }}
+      >
+        Strategy vs. Planning
+      </Typography>
       <Typography
         variant="h4"
       >
-        Strategy vs. Planning - Making Video Games that Make the World Better, With Money
+        Making Video Games that Make the World Better, With Money
       </Typography>
       <Typography
         variant="h6"
@@ -174,12 +192,13 @@ const About: React.FC = () => {
         AND / OR: How to make a business develop by partnering globally with creatives, all without assuming the illegal exploitation of the talent or the idiocy of the customer as a "must" in terms of leadership, business or otherwise.
       </Typography>
       <Typography
-        variant="h6"
+        variant="h5"
+        fontWeight="bold"
       >
         We're here to make the "average Joe" comparisons Pall, Son. NNW aims to raise the Bar. Rack em! 
       </Typography>
-    </HeroContainer>
-    <HomeContainerAlt maxWidth="xl" sx={{ textAlign: "left" }}>
+    </HomeContainerAlt>
+    <HomeContainer maxWidth="xl">
       <Typography
         variant="h4"
       >
@@ -190,7 +209,7 @@ const About: React.FC = () => {
           &nbsp;- Roger Martin <Link href="https://rogermartin.medium.com/strategy-vs-planning-complements-not-substitutes-ea08e56809d6" target="_blank" rel="noreferrer">(source)</Link>
         </div>
       </Typography>
-    </HomeContainerAlt>
+    </HomeContainer>
 
     {choices.map(({
       subHeader,
@@ -198,7 +217,7 @@ const About: React.FC = () => {
       title,
       victory
     }, i) => {
-      const Component = i % 2 === 0 ? HomeContainer : HomeContainerAlt
+      const Component = i % 2 !== 0 ? HomeContainer : HomeContainerAlt
 
       return <Component maxWidth="xl" key={`${title}-${subHeader}`}>
         <Typography
@@ -239,6 +258,7 @@ const About: React.FC = () => {
           <Grid 
             container
             spacing={4}
+            textAlign="left"
           >
             {subChoices && subChoices.map(({ body, subHeader, title }) => (
               <Grid
