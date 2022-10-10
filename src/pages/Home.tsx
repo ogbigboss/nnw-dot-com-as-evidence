@@ -25,29 +25,28 @@ const YakBlock: React.FC<YakBlockProps> = ({
   textAlign = 'left',
   inverted = false
 }) => (
-  <div
+  <HomeContainer
+    maxWidth="xl"
     style={{
       backgroundColor: inverted ? pink[100] : ""
     }}
   >
-    <HomeContainer maxWidth="xl">
-      <Typography
-        variant="h4"
-        component="h3"
-        textAlign={textAlign}
-      >
-        {header}
-      </Typography>
-      <hr />
-      <Typography
-        variant="h5"
-        component="p"
-        textAlign={textAlign}
-      >
-        {subHeader}
-      </Typography>
-    </HomeContainer>
-  </div>
+    <Typography
+      variant="h4"
+      component="h3"
+      textAlign={textAlign}
+    >
+      {header}
+    </Typography>
+    <hr />
+    <Typography
+      variant="h5"
+      component="p"
+      textAlign={textAlign}
+    >
+      {subHeader}
+    </Typography>
+  </HomeContainer>
 )
 
 const Home: React.FC = () => {
