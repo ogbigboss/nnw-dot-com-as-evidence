@@ -6,11 +6,6 @@ const HeroContainer = styled(Container)({
   paddingBottom: 196,
 })
 
-const HomeContainer = styled(Container)({
-  paddingTop: 96,
-  paddingBottom: 128,
-})
-
 const About: React.FC = () => (
   <>
     <HeroContainer maxWidth="xl">

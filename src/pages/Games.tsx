@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Box, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Container, Grid, IconButton, IconButtonProps, Typography } from '@mui/material'
+import { Avatar, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Container, Grid, IconButton, IconButtonProps, Typography } from '@mui/material'
 import { Favorite as FavoriteIcon, Share as ShareIcon, ExpandMore as ExpandMoreIcon } from '@mui/icons-material'
 import styled from '@mui/system/styled'
 
@@ -92,8 +92,8 @@ const Games: React.FC = () => {
       </Typography>
       <Grid
         container
-        spacing={{ xs: 4, md: 4 }}
-        columns={{ xs: 1, md: 8, xl: 16 }}
+        spacing={{ xs: 4, sm: 4 }}
+        columns={{ xs: 1, sm: 8, lg: 16 }}
       >
 				{gamesData.map(({ avatarText, title, subheader, desc, details, funding }, i) => (
           <Grid

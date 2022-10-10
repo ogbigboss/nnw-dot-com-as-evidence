@@ -1,4 +1,5 @@
-import { AppBar, Button, Container, Link, Toolbar, Typography } from '@mui/material'
+import { AppBar, Container, Toolbar, Typography } from '@mui/material'
+import theme from '../theme'
 
 interface NNWAppBarProps {
   msg?: React.ReactNode | string
@@ -20,15 +21,20 @@ const NNWAppBar: React.FC<NNWAppBarProps> = ({ msg }) => {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Button href="/" color="secondary" component={Link}>
-            <Typography
-              variant="h6"
-              component="h1"
-            >
-              New Noise Works - <small><em>{msg || getRandomJoke()}</em></small>
-            </Typography>
-          </Button>
+        <Toolbar disableGutters
+          sx={{
+            [theme.breakpoints.up('md')]: {
+              minHeight: 48
+            }
+          }}
+        >
+          <Typography
+            variant="h6"
+            component="h1"
+            color={theme.palette.secondary.light}
+          >
+            New Noise Works &copy; 2022 - <small><em>{msg || getRandomJoke()}</em></small>
+          </Typography>
         </Toolbar>
       </Container>
     </AppBar>
