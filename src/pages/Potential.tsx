@@ -32,8 +32,85 @@ const HomeContainer = styled(HeroContainer)({
 })
 
 const HomeContainerAlt = styled(HomeContainer)({
-  backgroundColor: pink[100]
+  backgroundColor: pink[100],
+  textAlign: "right"
 })
+
+const choices = [
+  {
+    title: <>Choice One:</>,
+    subHeader: <>Sell video games to a pre-existing and thriving "indie gaming" community, saving AAA for another day.</>,
+    victory: <>Victory is viability</>,
+    subChoices: [
+      {
+        title: <>Choice One.One:</>,
+        subHeader: <>Position for a scalable financial "hit"</>,
+        body: <>
+            <Typography paragraph>
+              For this grander idea to work, we'll need to have a "hit" game as soon as possible. This is standard fare for most any game studio or publisher, for better or worse. On top of being a "hit", it's business model will need to scale so the product can grow to encourage consistent revenue and growth.
+            </Typography>
+            <Typography paragraph>
+              This is why <em>The Promised Land</em> is the furthest in development -- as a free to play persistent multiplayer game, players will be encouraged to enjoy the farming and story experiences for free, while optionally buying decorative items. This business model is tried and true in the industry, making billions for AAA and indie game outlets alike. It also crucially allows us to keep building the game into new "worlds" to farm into, opening up new experiences as well as revenue opportunities.
+            </Typography>
+        </>
+      },
+      {
+        title: <>Choice One.Two:</>,
+        subHeader: <>Target existing submarkets w/ unique offerings</>,
+        body: <>
+            <Typography paragraph>
+              Both <em>The Promised Land</em> and <em>Tower Story</em> are being built in recognition of indie gaming audiences that exist as a viable submarket, while not being served something I can offer uniquely.
+            </Typography>
+            <Typography paragraph>
+              <em>The Promised Land</em> is akin to many popular farming games that have risen since the launch of <em>Stardew Valley</em>, which in turn was heavily inspired by the SNES classic <em>Harvest Moon</em>. However, <em>The Promised Land</em> is a persistent multiplayer farming game -- similar to games that make people say "<em>WOW</em>" -- that isn't currently matched in the market.
+            </Typography>
+            <Typography paragraph>
+              <em>Tower Story</em> is akin to many popular tower building games that have risen since the launch of <em>Sim Tower</em>. I'm still not sure if it's going to be multiplayer, but, you get it. How's it unique? It will be fully 3 dimensional -- even the building you're building.
+            </Typography>
+        </>
+      },
+      {
+        title: <>Choice One.Three:</>,
+        subHeader: <>Use skills to beat competitors on cost</>,
+        body: <>
+            <Typography paragraph>
+              So far, I'm just a developer, but I'm very experienced with the web. <em>The Promised Land</em> can be a scalable multiplayer game because of that. That said, I'm no artist, writer, animator -- and I'm simply a decent game developer, if an experienced veteran programmer.
+            </Typography>
+            <Typography paragraph>
+    NNW's current skill set vs. the indie competition is the offering of persistent multiplayer that can scale in development as well as production due to it's founder's past experiences as a programmer. At least, for TPL.
+            </Typography>
+            <Typography paragraph>
+              And not for nothing, but generally developers, server side especially, tend to be the highest point of cost for a game like this, aside from admin and customer service costs should it scale, so my past helps this be possible financially.
+            </Typography>
+        </>
+      }
+    ]
+  },
+  {
+    title: <>Choice Two:</>,
+    subHeader: <>Publicly route a percentage of the revenue to organizations of your choice helping humans.</>,
+    victory: <>Victory is tax verifiable support.</>,
+    subChoices: []
+  },
+  {
+    title: <>Choice One + Two =</>,
+    subHeader: <>A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."</>,
+    victory: <>Victory is gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.</>,
+    subChoices: []
+  },
+  {
+    title: <>Choice Three:</>,
+    subHeader: <>Something smells in this American Idiocracy. Avoid standard investment, growth, and corporate structures in order to scale a good thing without scaming the customers or the workers.</>,
+    victory: <>Victory is honestly just trying something new in this boring @$$, corny AF, D+ country.</>,
+    subChoices: []
+  },
+  {
+    title: <>Choice One + Two + Three = Winning:</>,
+    subHeader: <>Make games while paying animators, developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna get his money.</>,
+    victory: <>Victory is unhindered growth of an idea - not a limited set of social opportunities. How drab.</>,
+    subChoices: []
+  },
+]
 
 const About: React.FC = () => {
   const [expanded, setExpanded] = React.useState<boolean[]>([false, false, false, false])
@@ -54,7 +131,7 @@ const About: React.FC = () => {
         Strategy vs. Planning
       </Typography>
     </HeroContainer>
-    <HomeContainerAlt maxWidth="xl">
+    <HomeContainerAlt maxWidth="xl" sx={{ textAlign: "left" }}>
       <Typography
         variant="h4"
       >
@@ -66,177 +143,72 @@ const About: React.FC = () => {
         </div>
       </Typography>
     </HomeContainerAlt>
-    <HomeContainer maxWidth="xl">
-      <Typography
-        variant="h4"
-      >
-        Choice One:
-      </Typography>
-      <Typography
-        variant="h4"
-      >
-        Sell video games to a pre-existing and thriving "indie gaming" community, saving AAA for another day.
-      </Typography>
-      <Typography
-        sx={{ mt: 4 }}
-        variant="h4"
-      >
-        Victory is viability.
-      </Typography>
-      <ExpandMoreContainer>
-        <ExpandMore
-          expand={expanded[0]}
-          onClick={() => {
-            const expandedClone = expanded.slice()
-            expandedClone[0] = !expanded[0]
-            setExpanded(expandedClone)
-          }}
-          aria-expanded={expanded[0]}
-          aria-label="show more"
+
+    {choices.map(({
+      subHeader,
+      subChoices,
+      title,
+      victory
+    }, i) => {
+      const Component = i % 2 == 0 ? HomeContainer : HomeContainerAlt
+
+      return <Component maxWidth="xl">
+        <Typography
+          variant="h4"
         >
-        ...
-        </ExpandMore>
-      </ExpandMoreContainer>
-      <Collapse in={expanded[0]} timeout="auto" unmountOnExit>
-        <Grid 
-          container
-          spacing={4}
+          {title}
+        </Typography>
+        <Typography
+          variant="h4"
         >
+          {subHeader}
+        </Typography>
+        <Typography
+          sx={{ mt: 4 }}
+          variant="h4"
+        >
+          {victory}
+        </Typography>
+        {subChoices.length > 0 && (
+          <ExpandMoreContainer>
+            <ExpandMore
+              expand={expanded[i]}
+              onClick={() => {
+                const expandedClone = expanded.slice()
+                expandedClone[i] = !expanded[i]
+                setExpanded(expandedClone)
+              }}
+              aria-expanded={expanded[i]}
+              aria-label="show more"
+            >
+            ...
+            </ExpandMore>
+          </ExpandMoreContainer>
+        )}
+        <Collapse in={expanded[i]} timeout="auto" unmountOnExit>
           <Grid 
-            item
-            xs
+            container
+            spacing={4}
           >
-            <Typography variant="h5">
-              Choice One.One:
-            </Typography>
-            <Typography variant="h6">
-              Position for a scalable financial "hit"
-            </Typography>
-            <Typography paragraph>
-              For this grander idea to work, we'll need to have a "hit" game as soon as possible. This is standard fare for most any game studio or publisher, for better or worse. On top of being a "hit", it's business model will need to scale so the product can grow to encourage consistent revenue and growth.
-            </Typography>
-            <Typography paragraph>
-              This is why <em>The Promised Land</em> is the furthest in development -- as a free to play persistent multiplayer game, players will be encouraged to enjoy the farming and story experiences for free, while optionally buying decorative items. This business model is tried and true in the industry, making billions for AAA and indie game outlets alike. It also crucially allows us to keep building the game into new "worlds" to farm into, opening up new experiences as well as revenue opportunities.
-            </Typography>
+            {subChoices.map(({ body, subHeader, title }) => (
+              <Grid
+                item
+                xs={12}
+                lg
+              >
+                <Typography variant="h5">
+                  {title}
+                </Typography>
+                <Typography variant="h6">
+                  {subHeader}
+                </Typography>
+                {body}
+              </Grid>
+            ))}
           </Grid>
-          <Grid 
-            item
-            xs
-          >
-            <Typography variant="h5">
-              Choice One.Two:
-            </Typography>
-            <Typography variant="h6">
-              Target existing submarkets w/ unique offerings
-            </Typography>
-            <Typography paragraph>
-              Both <em>The Promised Land</em> and <em>Tower Story</em> are being built in recognition of indie gaming audiences that exist as a viable submarket, while not being served something I can offer uniquely.
-            </Typography>
-            <Typography paragraph>
-              <em>The Promised Land</em> is akin to many popular farming games that have risen since the launch of <em>Stardew Valley</em>, which in turn was heavily inspired by the SNES classic <em>Harvest Moon</em>. However, <em>The Promised Land</em> is a persistent multiplayer farming game -- similar to games that make people say "<em>WOW</em>" -- that isn't currently matched in the market.
-            </Typography>
-            <Typography paragraph>
-              <em>Tower Story</em> is akin to many popular tower building games that have risen since the launch of <em>Sim Tower</em>. I'm still not sure if it's going to be multiplayer, but, you get it. How's it unique? It will be fully 3 dimensional -- even the building you're building.
-            </Typography>
-          </Grid>
-          <Grid 
-            item
-            xs
-          >
-            <Typography variant="h5">
-              Choice One.Three:
-            </Typography>
-            <Typography variant="h6">
-              Use skills to beat competitors on cost
-            </Typography>
-            <Typography paragraph>
-              So far, I'm just a developer, but I'm very experienced with the web. <em>The Promised Land</em> can be a scalable multiplayer game because of that. That said, I'm no artist, writer, animator -- and I'm simply a decent game developer, if an experienced veteran programmer. 
-            </Typography>
-            <Typography paragraph>
-    NNW's current skill set vs. the indie competition is the offering of persistent multiplayer that can scale in development as well as production due to it's founder's past experiences as a programmer. At least, for TPL.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Collapse>
-    </HomeContainer>
-    <HomeContainerAlt maxWidth="xl">
-      <Typography
-        variant="h4"
-        textAlign="right"
-      >
-        Choice Two:
-      </Typography>
-      <Typography
-        variant="h4"
-        textAlign="right"
-      >
-        Publicly route a percentage of the revenue to organizations of your choice helping humans.
-      </Typography>
-      <Typography
-        sx={{ mt: 4 }}
-        variant="h4"
-        textAlign="right"
-      >
-        Victory is tax verifiable support.
-      </Typography>
-    </HomeContainerAlt>
-    <HomeContainer maxWidth="xl">
-      <Typography
-        variant="h4"
-      >
-        Choice One + Two =
-      </Typography>
-      <Typography
-        variant="h4"
-      >
-        A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."
-      </Typography>
-      <Typography
-        sx={{ mt: 4 }}
-        variant="h4"
-      >
-        Victory is gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.
-      </Typography>
-    </HomeContainer>
-    <HomeContainerAlt maxWidth="xl">
-      <Typography
-        variant="h4"
-        textAlign="right"
-      >
-        Choice Three =
-      </Typography>
-      <Typography
-        variant="h4"
-        textAlign="right"
-      >
-        Something smells in this American Idiocracy. Avoid standard investment, growth, and corporate structures in order to scale a good thing without scaming the customers or the workers.
-      </Typography>
-      <Typography
-        sx={{ mt: 4 }}
-        variant="h4"
-        textAlign="right"
-      >
-        Victory is honestly just trying something new in this boring @$$, corny AF, D+ country.
-      </Typography>
-    </HomeContainerAlt>
-    <HomeContainer maxWidth="xl">
-      <Typography
-        variant="h4"
-      >
-        Choice One + Two + Three = Winning:
-      </Typography>
-      <Typography
-        variant="h4"
-      >
-        Make games while paying animators, developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.
-      </Typography>
-      <Typography
-        sx={{ mt: 4 }}
-        variant="h4"
-      >
-        Victory is unhindered growth of an <em>idea</em> - not a limited set of social opportunities. How drab.
-      </Typography>
-    </HomeContainer>
+        </Collapse>
+      </Component>
+    })}
   </>
 }
 
