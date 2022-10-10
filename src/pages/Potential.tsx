@@ -50,7 +50,11 @@ const About: React.FC = () => (
         variant="h4"
       >
         Choice One:
-        <br />Make video games, for money
+      </Typography>
+      <Typography
+        variant="h4"
+      >
+        Make video games, for money
       </Typography>
     </HomeContainer>
     <HomeContainerAlt maxWidth="xl">
@@ -59,15 +63,50 @@ const About: React.FC = () => (
         textAlign="right"
       >
         Choice Two:
-        <br />Publicly route a percentage of the revenue to organizations of your choice helping humans
+      </Typography>
+      <Typography
+        variant="h4"
+        textAlign="right"
+      >
+        Publicly route a percentage of the revenue to organizations of your choice helping humans
       </Typography>
     </HomeContainerAlt>
     <HomeContainer maxWidth="xl">
       <Typography
         variant="h4"
       >
-        Choice One + Choice Two =
-        <br />A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism"
+        Choice One + Two =
+      </Typography>
+      <Typography
+        variant="h4"
+      >
+        A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism"
+      </Typography>
+    </HomeContainer>
+    <HomeContainerAlt maxWidth="xl">
+      <Typography
+        variant="h4"
+        textAlign="right"
+      >
+        Choice Three =
+      </Typography>
+      <Typography
+        variant="h4"
+        textAlign="right"
+      >
+        Something smells in this American Idiocracy. Avoid standard investment, growth, and corporate structures in order to scale a good thing without scaming the customers or the workers.
+      </Typography>
+    </HomeContainerAlt>
+    <HomeContainer maxWidth="xl">
+      <Typography
+        variant="h4"
+      >
+        Choice One + Two + Three = Winning:
+      </Typography>
+      <Typography
+        variant="h4"
+      >
+        Make games while paying developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.
       </Typography>
     </HomeContainer>
   </>
