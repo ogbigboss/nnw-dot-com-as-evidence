@@ -26,12 +26,12 @@ const About: React.FC = () => (
         variant="h4"
       >
         That said, if this <em>were</em> a pitch deck, this <em>is</em> what we'd be talking about.
-  <br />
-  <br />
-  Let's call it "How to Produce a Higher Ground."
-  <br />
-  <br />
-  All without sloppily co-opting Stevie Wonder! Leaders, keep on keepin' on!
+        <br />
+        <br />
+        Let's call it "How to Produce a Higher Ground."
+        <br />
+        <br />
+        All without sloppily co-opting Stevie Wonder! Leaders, keep on keepin' on!
       </Typography>
     </HeroContainer>
   </>

@@ -1,8 +1,8 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+import ThemeProvider from '@mui/material/styles/ThemeProvider'
 import styled from '@mui/system/styled'
-import { grey, pink } from '@mui/material/colors'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import theme from './theme'
 import AppBar from './components/AppBar'
 import Home from './pages/Home'
 import HuhWhat from './pages/WhatHowWhyNotYeahOK'
@@ -10,17 +10,6 @@ import Games from './pages/Games'
 import About from './pages/About'
 import Support from './pages/Support'
 import Potential from './pages/Potential'
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: grey[900],
-    },
-    secondary: {
-      main: pink[300],
-    },
-  },
-})
 
 const router = createBrowserRouter([
   {
