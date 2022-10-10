@@ -165,7 +165,7 @@ const About: React.FC = () => {
           mb: 8
         }}
       >
-        How to Produce a Higher Ground
+        Now Producing a Higher Ground
       </Typography>
     </HeroContainer>
     <HomeContainerAlt maxWidth="xl" style={{ textAlign: "left" }}>
