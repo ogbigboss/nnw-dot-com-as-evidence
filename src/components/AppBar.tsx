@@ -38,15 +38,10 @@ const NNWAppBar: React.FC = () => {
               }
             }}>
               <Button
-                href="/potential"
-                component={Link}
-                color="secondary"
-              >Pitch</Button>
-              <Button
                 href="/huh-what"
                 component={Link}
                 color="secondary"
-              >How</Button>
+              >FAQ</Button>
               <Button
                 href="/games"
                 component={Link}
@@ -62,6 +57,11 @@ const NNWAppBar: React.FC = () => {
                 component={Link}
                 color="secondary"
               >Pay me</Button>
+              <Button
+                href="/potential"
+                component={Link}
+                color="secondary"
+              >Old</Button>
             </Grid>
           </Grid>
         </Toolbar>

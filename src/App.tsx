@@ -15,7 +15,7 @@ import Potential from './pages/Potential'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <Potential />
   },
   {
     path: "/huh-what",
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/potential",
-    element: <Potential />
+    element: <Home />
   }
 ])
 

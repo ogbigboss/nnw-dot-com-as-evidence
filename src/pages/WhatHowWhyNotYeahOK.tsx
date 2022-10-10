@@ -17,6 +17,9 @@ const ContentType = styled(Typography)({
 const WhatHowWhyNotHuhWhat: React.FC = () => {
   return <>
     <Container maxWidth="xl">
+      <Typography variant="h2">
+        Fronting @$$ Questions:
+      </Typography>
       <Box
         sx={{
           display: 'grid',
@@ -47,22 +50,30 @@ const WhatHowWhyNotHuhWhat: React.FC = () => {
 
         <Item>
           <ContentType>
-            A good thing in this world
+            <em>
+              A good thing in this world
+            </em>
           </ContentType>
         </Item>
         <Item>
           <ContentType>
-            An obvious approach that does no harm
+            <em>
+              An obvious approach that does no harm
+            </em>
           </ContentType>
         </Item>
         <Item>
           <ContentType>
-            A fecitious argument typically inferring something is incorrect without being specific, framed as a polite question or point of clarification
+            <em>
+              A fecitious argument typically inferring something is incorrect without being specific, framed as a polite question or point of clarification
+            </em>
           </ContentType>
         </Item>
         <Item>
           <ContentType>
-            A passive aggressive but dominantly dismissive retort to the non serious aspects of the argument offered against the obvious good thing that does no harm
+            <em>
+              A passive aggressive but dominantly dismissive retort to the non serious aspects of the argument offered against the obvious good thing that does no harm
+            </em>
           </ContentType>
         </Item>
 

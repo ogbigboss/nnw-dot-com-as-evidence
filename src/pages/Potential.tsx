@@ -73,15 +73,15 @@ const choices = [
         title: <>Choice One.Three:</>,
         subHeader: <>Use skills to beat competitors on cost</>,
         body: <>
-            <Typography paragraph>
-              So far, I'm just a developer, but I'm very experienced with the web. <em>The Promised Land</em> can be a scalable multiplayer game because of that. That said, I'm no artist, writer, animator -- and I'm simply a decent game developer, if an experienced veteran programmer.
-            </Typography>
-            <Typography paragraph>
-    NNW's current skill set vs. the indie competition is the offering of persistent multiplayer that can scale in development as well as production due to it's founder's past experiences as a programmer. At least, for TPL.
-            </Typography>
-            <Typography paragraph>
-              And not for nothing, but generally developers, server side especially, tend to be the highest point of cost for a game like this, aside from admin and customer service costs should it scale, so my past helps this be possible financially.
-            </Typography>
+          <Typography paragraph>
+            So far, I'm just a developer, but I'm very experienced with the web. <em>The Promised Land</em> can be a scalable multiplayer game because of that. That said, I'm no artist, writer, animator -- and I'm simply a decent game developer, if an experienced veteran programmer.
+          </Typography>
+          <Typography paragraph>
+  NNW's current skill set vs. the indie competition is the offering of persistent multiplayer that can scale in development as well as production due to it's founder's past experiences as a programmer. At least, for TPL.
+          </Typography>
+          <Typography paragraph>
+            And not for nothing, but generally developers, server side especially, tend to be the highest point of cost for a game like this, aside from admin and customer service costs should it scale, so my past helps this be possible financially.
+          </Typography>
         </>
       }
     ]
@@ -106,14 +106,48 @@ const choices = [
   },
   {
     title: <>Choice One + Two + Three = Winning:</>,
-    subHeader: <>Make games while paying animators, developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna get his money.</>,
-    victory: <>Victory is unhindered growth of an idea - not a limited set of social opportunities. How drab.</>,
+    subHeader: <>Make games while paying animators, developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.</>,
+    victory: <>Victory is the unhindered growth of an idea - not a limited set of social opportunities. How drab.</>,
     subChoices: []
   },
+  {
+    title: <>Who would be supported then?</>,
+    subHeader: <>You'll be able to choose whom to support / how to balance the donation between several groups, falling under the following four suits:</>,
+    subChoices: [
+      {
+        title: <>Vets etc.:</>,
+        subHeader: <>
+          Government workers and those formerly detained by the government that the government can't support <small>(any longer, in the moment, "etc.")</small>
+        </>,
+        body: <></>
+      },
+      {
+        title: <>The broken hearted:</>,
+        subHeader: <>
+          Mental health, substance abuse, victims of sexual violence -- the symptoms of broken families and societies shouldn't be a matter of charity -- but it isn't something with sufficient support either
+        </>,
+        body: <></>
+      },
+      {
+        title: <>The hearted broke:</>,
+        subHeader: <>
+            Many have been left behind because of how they live - LGBTQ <small>(#notallstr8s)</small>, the disabled, many indigineous, non whites <small>(#notallwhites)</small> and non males - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anyone</em>)</small>
+        </>,
+        body: <></>
+      },
+      {
+        title: <>The empirically correct:</>, 
+        subHeader: <>
+          We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** <small>(or something, idk, I'm often incorrect)</small>. This would be like that! Sort of.
+        </>,
+        body: <></>
+      }
+    ]
+  }
 ]
 
 const About: React.FC = () => {
-  const [expanded, setExpanded] = React.useState<boolean[]>([false, false, false, false])
+  const [expanded, setExpanded] = React.useState<boolean[]>([false, false, false, false, false, true])
 
   return <>
     <HeroContainer maxWidth="xl">
@@ -128,7 +162,21 @@ const About: React.FC = () => {
       <Typography
         variant="h4"
       >
-        Strategy vs. Planning
+        Strategy vs. Planning - Making Video Games that Make the World Better, With Money
+      </Typography>
+      <Typography
+        variant="h6"
+        sx={{
+          mt: 2,
+          mb: 2
+        }}
+      >
+        AND / OR: How to make a business develop by partnering globally with creatives, all without assuming the illegal exploitation of the talent or the idiocy of the customer as a "must" in terms of leadership, business or otherwise.
+      </Typography>
+      <Typography
+        variant="h6"
+      >
+        We're here to make the "average Joe" comparisons Pall, Son. NNW aims to raise the Bar. Rack em! 
       </Typography>
     </HeroContainer>
     <HomeContainerAlt maxWidth="xl" sx={{ textAlign: "left" }}>
@@ -150,9 +198,9 @@ const About: React.FC = () => {
       title,
       victory
     }, i) => {
-      const Component = i % 2 == 0 ? HomeContainer : HomeContainerAlt
+      const Component = i % 2 === 0 ? HomeContainer : HomeContainerAlt
 
-      return <Component maxWidth="xl">
+      return <Component maxWidth="xl" key={`${title}-${subHeader}`}>
         <Typography
           variant="h4"
         >
@@ -163,13 +211,15 @@ const About: React.FC = () => {
         >
           {subHeader}
         </Typography>
-        <Typography
-          sx={{ mt: 4 }}
-          variant="h4"
-        >
-          {victory}
-        </Typography>
-        {subChoices.length > 0 && (
+        {victory &&
+          <Typography
+            sx={{ mt: 4 }}
+            variant="h4"
+          >
+            {victory}
+          </Typography>
+        }
+        {subChoices && subChoices.length > 0 && (
           <ExpandMoreContainer>
             <ExpandMore
               expand={expanded[i]}
@@ -190,11 +240,12 @@ const About: React.FC = () => {
             container
             spacing={4}
           >
-            {subChoices.map(({ body, subHeader, title }) => (
+            {subChoices && subChoices.map(({ body, subHeader, title }) => (
               <Grid
                 item
-                xs={12}
+                key={`${title}-${subHeader}`}
                 lg
+                xs={12}
               >
                 <Typography variant="h5">
                   {title}
@@ -202,7 +253,7 @@ const About: React.FC = () => {
                 <Typography variant="h6">
                   {subHeader}
                 </Typography>
-                {body}
+                {body && body}
               </Grid>
             ))}
           </Grid>
