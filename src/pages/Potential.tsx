@@ -1,6 +1,6 @@
 import { Container, Link, Typography } from '@mui/material'
 import styled from '@mui/system/styled'
-import theme from '../theme'
+import { pink } from '@mui/material/colors'
 
 const HeroContainer = styled(Container)({
   paddingTop: 128,
@@ -8,12 +8,12 @@ const HeroContainer = styled(Container)({
 })
 
 const HomeContainer = styled(HeroContainer)({
-  paddingTop: 96,
-  paddingBottom: 96
+  paddingTop: 128,
+  paddingBottom: 128
 })
 
-const HomeContainerAlt = styled(HeroContainer)({
-  backgroundColor: theme.palette.secondary.light
+const HomeContainerAlt = styled(HomeContainer)({
+  backgroundColor: pink[100]
 })
 
 const About: React.FC = () => (

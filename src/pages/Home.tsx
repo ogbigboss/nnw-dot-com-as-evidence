@@ -27,7 +27,7 @@ const YakBlock: React.FC<YakBlockProps> = ({
 }) => (
   <div
     style={{
-      backgroundColor: inverted ? pink[50] : ""
+      backgroundColor: inverted ? pink[100] : ""
     }}
   >
     <HomeContainer maxWidth="xl">
