@@ -116,7 +116,15 @@ const WhatHowWhyNotHuhWhat: React.FC = () => {
             Run a gaming company in a modern day cyber dystopia that transparently repairs profit margin manipulation to the favor of the human population
           </ContentType>
         </Item>
-        <Item></Item>
+        <Item>
+          <ContentType>
+            See above. That said, the biggest concern would be making sure employees are paid above market rates, even while focusing on a redistributive model. 
+    <br /><br />
+    It's not impossible but it does require a "hit". It's why we're (I'm?) focusing on <em>The Promised Land</em> as an eventual release. The reasons are about as obvious as saying (bah)Zynga!
+    <br /><br />
+    But(tZynga), for a good cause. Or several.
+          </ContentType>
+        </Item>
         <Item>
           <ContentType>
             But what about the haters?
