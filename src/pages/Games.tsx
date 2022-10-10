@@ -28,59 +28,61 @@ const FundType = styled(Typography)({
   marginLeft: 16
 })
 
-const gamesData = [{
-	avatarText: "TPL",
-	title: "The Promised Land",
-	subheader: <><a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">Playable</a> Dev Build</>,
-	desc: <>A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm <a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">now</a>.</>,
-  funding: "$150k-750k+",
-	details: <>
-		<Typography>Method:</Typography>
-		<Typography>
-			Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-			aside for 10 minutes.
-		</Typography>
-	</>
-},{
-	avatarText: "TS",
-	title: "Tower Story: First Story",
-	subheader: "In Development",
-  funding: "$100k-500k+",
-	desc: "A 3D Tower builder akin to S*mT*w*r with S*ms like elements. Make your dream tower full of all kinds of stories!",
-	details: <>
-		<Typography>Method:</Typography>
-		<Typography>
-			Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-			aside for 10 minutes.
-		</Typography>
-	</>
-},{
-	avatarText: "TPM",
-	title: "FTSP: The Piano Man",
-	subheader: "Concepting",
-  funding: "$25k-50k+",
-	desc: "A robo detective story told through the second person's POV. Figure out the algorithms before they get in your head!",
-	details: <>
-		<Typography>Method:</Typography>
-		<Typography>
-			Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-			aside for 10 minutes.
-		</Typography>
-	</>
-},{
-	avatarText: "VTN",
-	title: "Voodoo Trolluhnomics",
-	subheader: "Concepting",
-  funding: "$25k-50k+",
-	desc: "What happens when everyone's a data zombie in a cyber dystopia and you're a witch with an analog vibe? You deicide!",
-	details: <>
-		<Typography>Method:</Typography>
-		<Typography>
-			Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-			aside for 10 minutes.
-		</Typography>
-	</>
-},]
+const gamesData = [
+  {
+    avatarText: "TPL",
+    title: "The Promised Land",
+    subheader: <><a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">Playable</a> Dev Build</>,
+    desc: <>A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm <a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">now</a>.</>,
+    funding: "$150k-750k+",
+    details: <>
+      <Typography>Method:</Typography>
+      <Typography>
+        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
+        aside for 10 minutes.
+      </Typography>
+    </>
+  },{
+    avatarText: "TS",
+    title: "Tower Story: First Story",
+    subheader: "In Development",
+    funding: "$100k-500k+",
+    desc: "A 3D Tower builder akin to S*mT*w*r with S*ms like elements. Make your dream tower full of all kinds of stories!",
+    details: <>
+      <Typography>Method:</Typography>
+      <Typography>
+        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
+        aside for 10 minutes.
+      </Typography>
+    </>
+  },{
+    avatarText: "TPM",
+    title: "FTSP: The Piano Man",
+    subheader: "Concepting",
+    funding: "$25k-50k+",
+    desc: "A robo detective story told through the second person's POV. Figure out the algorithms before they get in your head!",
+    details: <>
+      <Typography>Method:</Typography>
+      <Typography>
+        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
+        aside for 10 minutes.
+      </Typography>
+    </>
+  },{
+    avatarText: "VTN",
+    title: "Voodoo Trolluhnomics",
+    subheader: "Concepting",
+    funding: "$25k-50k+",
+    desc: "What happens when everyone's a data zombie in a cyber dystopia and you're a witch with an analog vibe? You deicide!",
+    details: <>
+      <Typography>Method:</Typography>
+      <Typography>
+        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
+        aside for 10 minutes.
+      </Typography>
+    </>
+  },
+]
 
 const Games: React.FC = () => {
   const [expanded, setExpanded] = React.useState<boolean[]>([false, false, false, false])
@@ -95,7 +97,14 @@ const Games: React.FC = () => {
         spacing={{ xs: 4, sm: 4 }}
         columns={{ xs: 1, sm: 8, lg: 16 }}
       >
-				{gamesData.map(({ avatarText, title, subheader, desc, details, funding }, i) => (
+				{gamesData.map(({
+          avatarText,
+          desc,
+          details,
+          funding,
+          subheader,
+          title
+        }, i) => (
           <Grid
             item
             key={title}
