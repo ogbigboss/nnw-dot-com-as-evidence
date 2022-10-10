@@ -75,7 +75,13 @@ const About: React.FC = () => {
       <Typography
         variant="h4"
       >
-        Sell video games to a pre-existing and thriving "indie gaming" community, saving AAA for another day
+        Sell video games to a pre-existing and thriving "indie gaming" community, saving AAA for another day.
+      </Typography>
+      <Typography
+        sx={{ mt: 4 }}
+        variant="h4"
+      >
+        Victory is viability.
       </Typography>
       <ExpandMoreContainer>
         <ExpandMore
@@ -91,7 +97,7 @@ const About: React.FC = () => {
         ...
         </ExpandMore>
       </ExpandMoreContainer>
-      <Collapse in={!expanded[0]} timeout="auto" unmountOnExit>
+      <Collapse in={expanded[0]} timeout="auto" unmountOnExit>
         <Grid 
           container
           spacing={4}
@@ -124,7 +130,7 @@ const About: React.FC = () => {
               Target existing submarkets w/ unique offerings
             </Typography>
             <Typography paragraph>
-              Both <em>The Promised Land</em> and <em>Tower Story</em> are being built in recognition of indie gaming audiences that exists as a viable submarket, while not being served something I can offer uniquely.
+              Both <em>The Promised Land</em> and <em>Tower Story</em> are being built in recognition of indie gaming audiences that exist as a viable submarket, while not being served something I can offer uniquely.
             </Typography>
             <Typography paragraph>
               <em>The Promised Land</em> is akin to many popular farming games that have risen since the launch of <em>Stardew Valley</em>, which in turn was heavily inspired by the SNES classic <em>Harvest Moon</em>. However, <em>The Promised Land</em> is a persistent multiplayer farming game -- similar to games that make people say "<em>WOW</em>" -- that isn't currently matched in the market.
@@ -164,7 +170,14 @@ const About: React.FC = () => {
         variant="h4"
         textAlign="right"
       >
-        Publicly route a percentage of the revenue to organizations of your choice helping humans
+        Publicly route a percentage of the revenue to organizations of your choice helping humans.
+      </Typography>
+      <Typography
+        sx={{ mt: 4 }}
+        variant="h4"
+        textAlign="right"
+      >
+        Victory is tax verifiable support.
       </Typography>
     </HomeContainerAlt>
     <HomeContainer maxWidth="xl">
@@ -176,7 +189,13 @@ const About: React.FC = () => {
       <Typography
         variant="h4"
       >
-        A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism"
+        A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."
+      </Typography>
+      <Typography
+        sx={{ mt: 4 }}
+        variant="h4"
+      >
+        Victory is gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.
       </Typography>
     </HomeContainer>
     <HomeContainerAlt maxWidth="xl">
@@ -192,6 +211,13 @@ const About: React.FC = () => {
       >
         Something smells in this American Idiocracy. Avoid standard investment, growth, and corporate structures in order to scale a good thing without scaming the customers or the workers.
       </Typography>
+      <Typography
+        sx={{ mt: 4 }}
+        variant="h4"
+        textAlign="right"
+      >
+        Victory is honestly just trying something new in this boring @$$, corny AF, D+ country.
+      </Typography>
     </HomeContainerAlt>
     <HomeContainer maxWidth="xl">
       <Typography
@@ -203,6 +229,12 @@ const About: React.FC = () => {
         variant="h4"
       >
         Make games while paying animators, developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.
+      </Typography>
+      <Typography
+        sx={{ mt: 4 }}
+        variant="h4"
+      >
+        Victory is unhindered growth of an <em>idea</em> - not a limited set of social opportunities. How drab.
       </Typography>
     </HomeContainer>
   </>
