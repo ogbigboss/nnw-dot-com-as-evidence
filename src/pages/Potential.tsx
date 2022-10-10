@@ -20,18 +20,15 @@ const About: React.FC = () => (
           mb: 8
         }}
       >
-        This isn't a pitch, just a realistic vision of the bounds, immediate and long term, of this project
+        How to Produce a Higher Ground
       </Typography>
       <Typography
         variant="h4"
       >
+        This isn't a pitch, just a realistic vision of the bounds, immediate and long term, of this project
+        <br />
+        <br />
         That said, if this <em>were</em> a pitch deck, this <em>is</em> what we'd be talking about.
-        <br />
-        <br />
-        Let's call it "How to Produce a Higher Ground."
-        <br />
-        <br />
-        All without sloppily co-opting Stevie Wonder! Leaders, keep on keepin' on!
       </Typography>
     </HeroContainer>
   </>

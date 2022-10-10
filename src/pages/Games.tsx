@@ -87,6 +87,9 @@ const Games: React.FC = () => {
 
   return (
 		<Container maxWidth="xl" sx={{ pt: 4 }}>
+      <Typography paragraph>
+        ** All funding estimates are, estimates, and exclude the idea of fundraising for others, meaning, we'd need these funds to make the game to have something to sell in order to fundraise for others. I'm also probably underthinking marketing funds, hence, the "+"
+      </Typography>
       <Grid
         container
         spacing={{ xs: 4, md: 4 }}

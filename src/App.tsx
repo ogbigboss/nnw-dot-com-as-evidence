@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import theme from './theme'
 import AppBar from './components/AppBar'
+import FooterBar from './components/FooterBar'
 import Home from './pages/Home'
 import HuhWhat from './pages/WhatHowWhyNotYeahOK'
 import Games from './pages/Games'
@@ -52,11 +53,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <SiteContainer>
-        <AppBar msg="failures in leadership meant you were following the wrong people" />
+        <AppBar />
         <SiteContent>
           <RouterProvider router={router} />
         </SiteContent>
-        <AppBar />
+        <FooterBar />
       </SiteContainer>
     </ThemeProvider>
   )
