@@ -33,7 +33,7 @@ const gamesData = [{
 	title: "The Promised Land",
 	subheader: <><a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">Playable</a> Dev Build</>,
 	desc: <>A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm <a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">now</a>.</>,
-  funding: "$150k-500k+",
+  funding: "$150k-750k+",
 	details: <>
 		<Typography>Method:</Typography>
 		<Typography>
@@ -45,7 +45,7 @@ const gamesData = [{
 	avatarText: "TS",
 	title: "Tower Story: First Story",
 	subheader: "In Development",
-  funding: "$100k-250k+",
+  funding: "$100k-500k+",
 	desc: "A 3D Tower builder akin to S*mT*w*r with S*ms like elements. Make your dream tower full of all kinds of stories!",
 	details: <>
 		<Typography>Method:</Typography>
@@ -58,7 +58,7 @@ const gamesData = [{
 	avatarText: "TPM",
 	title: "FTSP: The Piano Man",
 	subheader: "Concepting",
-  funding: "$25k-75k+",
+  funding: "$25k-50k+",
 	desc: "A robo detective story told through the second person's POV. Figure out the algorithms before they get in your head!",
 	details: <>
 		<Typography>Method:</Typography>
@@ -71,7 +71,7 @@ const gamesData = [{
 	avatarText: "VTN",
 	title: "Voodoo Trolluhnomics",
 	subheader: "Concepting",
-  funding: "$25k-75k+",
+  funding: "$25k-50k+",
 	desc: "What happens when everyone's a data zombie in a cyber dystopia and you're a witch with an analog vibe? You deicide!",
 	details: <>
 		<Typography>Method:</Typography>
