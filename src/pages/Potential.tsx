@@ -226,7 +226,7 @@ const choices = [
       {
         title: <>The Broken Hearted:</>,
         subHeader: <>
-          Mental health, substance abuse, victims of sexual violence -- the symptoms of broken families and societies shouldn't be a matter of charity -- but it isn't something with sufficient support either
+          Mental health, substance abuse, victims of sexual violence -- the symptoms of societies led by broken families shouldn't be a matter of charity -- but it isn't something with sufficient support either
         </>,
         body: <></>
       },
