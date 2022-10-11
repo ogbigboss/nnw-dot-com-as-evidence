@@ -33,7 +33,6 @@ const HomeContainer = styled(HeroContainer)({
 
 const HomeContainerAlt = styled(HomeContainer)({
   backgroundColor: pink[100],
-  textAlign: "right"
 })
 
 const choices = [

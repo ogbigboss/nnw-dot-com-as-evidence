@@ -168,6 +168,9 @@ const Games: React.FC = () => {
           </Grid>
 				))}
 			</Grid>
+      <Typography paragraph sx={{ mt: 4 }}>
+        ** Left out of funding estimates are potential administration costs with regards to coordinating with outside organizations as fundraising partners, as well as customer service and administration costs associated with <em>The Promised Land</em>, which is a proposed live service game. It's hopeful but if revenue can come in, that can be managed. At lower funding levels this is just another burden of the founder.
+      </Typography>
 		</Container>
 	)
 }
