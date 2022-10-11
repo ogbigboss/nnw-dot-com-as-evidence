@@ -153,7 +153,7 @@ const About: React.FC = () => {
       <Typography
         variant="h1"
         sx={{
-          mb: 8
+          mb: 2
         }}
       >
         New Noise Works
