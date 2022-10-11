@@ -45,27 +45,27 @@ const choices = [
         title: <>Choice One.One:</>,
         subHeader: <>Position for a scalable financial "hit"</>,
         body: <>
-            <Typography paragraph>
-              For this grander idea to work, we'll need to have a "hit" game as soon as possible. This is standard fare for most any game studio or publisher, for better or worse. On top of being a "hit", it's business model will need to scale so the product can grow to encourage consistent revenue and growth.
-            </Typography>
-            <Typography paragraph>
-              This is why <em>The Promised Land</em> is the furthest in development -- as a free to play persistent multiplayer game, players will be encouraged to enjoy the farming and story experiences for free, while optionally buying decorative items. This business model is tried and true in the industry, making billions for AAA and indie game outlets alike. It also crucially allows us to keep building the game into new "worlds" to farm into, opening up new experiences as well as revenue opportunities.
-            </Typography>
+          <Typography paragraph>
+            For this grander idea to work, we'll need to have a "hit" game as soon as possible. This is standard fare for most any game studio or publisher, for better or worse. On top of being a "hit", it's business model will need to scale so the product can grow to encourage consistent revenue and growth.
+          </Typography>
+          <Typography paragraph>
+            This is why <em>The Promised Land</em> is the furthest in development -- as a free to play persistent multiplayer game, players will be encouraged to enjoy the farming and story experiences for free, while optionally buying decorative items. This business model is tried and true in the industry, making billions for AAA and indie game outlets alike. It also crucially allows us to keep building the game into new "worlds" to farm into, opening up new experiences as well as revenue opportunities.
+          </Typography>
         </>
       },
       {
         title: <>Choice One.Two:</>,
         subHeader: <>Target existing submarkets w/ unique offerings</>,
         body: <>
-            <Typography paragraph>
-              Both <em>The Promised Land</em> and <em>Tower Story</em> are being built in recognition of indie gaming audiences that exist as a viable submarket, while not being served something I can offer uniquely.
-            </Typography>
-            <Typography paragraph>
-              <em>The Promised Land</em> is akin to many popular farming games that have risen since the launch of <em>Stardew Valley</em>, which in turn was heavily inspired by the SNES classic <em>Harvest Moon</em>. However, <em>The Promised Land</em> is a persistent multiplayer farming game -- similar to games that make people say "<em>WOW</em>" -- that isn't currently matched in the market.
-            </Typography>
-            <Typography paragraph>
-              <em>Tower Story</em> is akin to many popular tower building games that have risen since the launch of <em>Sim Tower</em>. I'm still not sure if it's going to be multiplayer, but, you get it. How's it unique? It will be fully 3 dimensional -- even the building you're building.
-            </Typography>
+          <Typography paragraph>
+            Both <em>The Promised Land</em> and <em>Tower Story</em> are being built in recognition of indie gaming audiences that exist as a viable submarket, while not being served something I can offer uniquely.
+          </Typography>
+          <Typography paragraph>
+            <em>The Promised Land</em> is akin to many popular farming games that have risen since the launch of <em>Stardew Valley</em>, which in turn was heavily inspired by the SNES classic <em>Harvest Moon</em>. However, <em>The Promised Land</em> is a persistent multiplayer farming game -- similar to games that make people say "<em>WOW</em>" -- that isn't currently matched in the market.
+          </Typography>
+          <Typography paragraph>
+            <em>Tower Story</em> is akin to many popular tower building games that have risen since the launch of <em>Sim Tower</em>. I'm still not sure if it's going to be multiplayer, but, you get it. How's it unique? It will be fully 3 dimensional -- even the building you're building.
+          </Typography>
         </>
       },
       {
@@ -147,6 +147,7 @@ const choices = [
 
 const About: React.FC = () => {
   const [expanded, setExpanded] = React.useState<boolean[]>([false, false, false, false, false, true])
+  const [mojo, setMojo] = React.useState<boolean>(false)
 
   return <>
     <HeroContainer maxWidth="xl">
@@ -181,23 +182,35 @@ const About: React.FC = () => {
       >
         Making Video Games that Make the World Better, With Money
       </Typography>
-      <Typography
-        variant="h6"
-        sx={{
-          mt: 2,
-          mb: 2
-        }}
-      >
-        AND / OR: How to make a business develop by partnering globally with creatives, all without assuming the illegal exploitation of the talent or the idiocy of the customer as a "must" in terms of leadership, business or otherwise.
-      </Typography>
-      <Typography
-        variant="h5"
-        fontWeight="bold"
-      >
-        We're here to make the "average Joe" comparisons Pall, Son. NNW aims to raise the Bar. Rack em! 
-      </Typography>
+      <ExpandMoreContainer>
+        <ExpandMore
+          expand={mojo}
+          onClick={() => setMojo(!mojo)}
+          aria-expanded={mojo}
+          aria-label="show more"
+        >
+        ...
+        </ExpandMore>
+      </ExpandMoreContainer>
+      <Collapse in={mojo} timeout="auto" unmountOnExit>
+        <Typography
+          variant="h6"
+          sx={{
+            mt: 2,
+            mb: 2
+          }}
+        >
+          AND / OR: How to make a business develop by partnering globally with creatives, all without assuming the illegal exploitation of the talent or the idiocy of the customer as a "must" in terms of leadership, business or otherwise.
+        </Typography>
+        <Typography
+          variant="h5"
+          fontWeight="bold"
+        >
+          We're here to make the "average Joe" comparisons Pall, Son. NNW aims to raise the Bar. Rack em! 
+        </Typography>
+      </Collapse>
     </HomeContainerAlt>
-    <HomeContainer maxWidth="xl">
+    <HomeContainer maxWidth="lg">
       <Typography
         variant="h4"
       >
@@ -218,7 +231,7 @@ const About: React.FC = () => {
     }, i) => {
       const Component = i % 2 !== 0 ? HomeContainer : HomeContainerAlt
 
-      return <Component maxWidth="xl" key={`${title}-${subHeader}`}>
+      return <Component maxWidth={i < 5 ? 'lg' : 'xl'} key={`${title}-${subHeader}`}>
         <Typography
           variant="h4"
           fontWeight="bold"
