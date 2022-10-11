@@ -197,7 +197,7 @@ const choices = [
         subHeader: <>Content creation means paying for it</>,
         body: <>
           <Typography paragraph>
-            America's current leadership class has promoted competition to the point that collaboration is impossible. The result is a country at each other's throats over social media drive pathologies that don't exist in a paycheck to paycheck life.
+            America's current leadership class has promoted competition to the point that collaboration is impossible. The result is a country at each other's throats over social media driven pathologies that don't exist in a paycheck to paycheck life.
           </Typography>
           <Typography paragraph>
             The current administration forces higher taxes with high inflation on it's citezenry. By being open about finances internally and perhaps externally, NNW will ensure <strong>compensation is collobrative -- to a vote, so the company competes as a team, not against each other</strong>, like <em>some</em> American leaders would want you to do.
