@@ -167,7 +167,44 @@ const choices = [
     title: <>Choice Three:</>,
     subHeader: <>Something smells in this American Idiocracy. Avoid standard investment, growth, and corporate structures in order to scale a good thing without scaming the customers or the workers.</>,
     victory: <><em><strong>Victory is</strong></em> honestly just trying something new in this boring @$$, corny AF, D+ country.</>,
-    subChoices: []
+    subChoices: [
+      {
+        title: <>Choice Three.One</>,
+        subHeader: <>Or, there is no business "as usual"</>,
+        body: <>
+          <Typography paragraph>
+            The truth of all businesses, for their history, is they form their own organizational structure. Governments exist largely in the relationship of taxes and possible criminal behaviors, which, we'd avoid.
+          </Typography>
+          <Typography paragraph>
+            Outside of outright facist governments, there is rarely so much regulation such to stifle innovation completely. Hopefully not in America, right?
+          </Typography>
+        </>
+      },
+      {
+        title: <>Choice Three.Two</>,
+        subHeader: <>Co Ops have scaled globally</>,
+        body: <>
+          <Typography paragraph>
+            Organizational structure for NNW is a big decision to make. For inspiration we'd seek successful models, and co-ops have proven to be tenable, scalable, lucrative for investors, as well as hospitable to it's employees. Mondragon is a great example, posting revenue figures in the billions.
+          </Typography>
+          <Typography paragraph>
+            That said, there are a lot of ways to skin this... well, you get it.
+          </Typography>
+        </>
+      },
+      {
+        title: <>Choice Three.Three</>,
+        subHeader: <>Content creation means paying for it</>,
+        body: <>
+          <Typography paragraph>
+            America's current leadership class has promoted competition to the point that collaboration is impossible. The result is a country at each other's throats over social media drive pathologies that don't exist in a paycheck to paycheck life.
+          </Typography>
+          <Typography paragraph>
+            The current administration forces higher taxes with high inflation on it's citezenry. By being open about finances internally and perhaps externally, NNW will ensure <strong>compensation is collobrative -- to a vote, so the company competes as a team, not against each other</strong>, like <em>some</em> American leaders would want you to do.
+          </Typography>
+        </>
+      },
+    ]
   },
   {
     title: <>Choice One + Two + Three = Winning:</>,
