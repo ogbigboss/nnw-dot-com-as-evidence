@@ -200,7 +200,7 @@ const choices = [
             America's current leadership class has promoted competition to the point that collaboration is impossible. The result is a country at each other's throats over social media driven pathologies that don't exist in a paycheck to paycheck life.
           </Typography>
           <Typography paragraph>
-            The current administration forces higher taxes with high inflation on it's citezenry. NNW will look up to institutions like <strong>Bloomberg Inc, where employees are paid above market value as a standard so the company competes as a team, not against each other</strong>, like <em>some</em> American leaders would want you to do.
+            The current administration forces high taxes with higher inflation on it's citezenry. NNW will look up to institutions like <strong>Bloomberg Inc, where employees are paid above market value as a standard so the company competes as a team, not against each other</strong>, like <em>some</em> American leaders would want you to do.
           </Typography>
         </>
       },
