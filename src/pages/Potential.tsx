@@ -89,13 +89,70 @@ const choices = [
     title: <>Choice Two:</>,
     subHeader: <>Publicly route a percentage of the revenue to organizations of your choice helping humans.</>,
     victory: <><em><strong>Victory is</strong></em> tax verifiable support.</>,
-    subChoices: []
+    subChoices: [
+      {
+        title: <>Choice Two.One:</>,
+        subHeader: <>Credit card processors route funds</>,
+        body: <>
+          <Typography paragraph>
+          </Typography>
+        </>
+      },
+      {
+        title: <>Choice Two.Two:</>,
+        subHeader: <>Financial transparency as a default</>,
+        body: <>
+          <Typography paragraph>
+            All revenue distributions will be recorded and reported
+          </Typography>
+        </>
+      },
+      {
+        title: <>Choice Two.Three:</>,
+        subHeader: <>Donations qualify as tax deducations</>,
+        body: <>
+          <Typography paragraph>
+          </Typography>
+        </>
+      },
+    ]
   },
   {
     title: <>Choice One + Two =</>,
-    subHeader: <>A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."</>,
-    victory: <><em><strong>Victory is</strong></em> gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.</>,
-    subChoices: []
+    subHeader: <>A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."<br /><br />Furthermore, free to play games allow those without to support causes simply by playing, all proven by aforementioned "capitalism".</>,
+    victory: <>
+      <em><strong>Victory is</strong></em> gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.
+      <br /><br />
+      Also, we'll still have violent games, social games, maybe even socially violent games, eventually, probably. Just saying, we're not bad at those.
+    </>,
+    subChoices: [
+      {
+        title: <>(One + Two).One:</>,
+        subHeader: <>Free to play becomes free to support</>,
+        body: <>
+          <Typography paragraph>
+          </Typography>
+        </>
+      },
+      {
+        title: <>(One + Two).Two:</>,
+        subHeader: <>Gamers love supporting good causes</>,
+        body: <>
+          <Typography paragraph>
+            Ever notice all those fundraising bars all over Twitch? They (those kids) actually like that shit. Like, they like raising money for other people. In a proven way.
+          </Typography>
+        </>
+      },
+      {
+        title: <>(One + Two).Three:</>,
+        subHeader: <>Gamers disdain toxic game developers</>,
+        body: <>
+          <Typography paragraph>
+            Look, I can obviously piss some people off. But maybe if I'm too busy and happy I'd shut the f*** up you dig? Besides, I'm trying to do a good thing here, people'll get it.
+          </Typography>
+        </>
+      },
+    ]
   },
   {
     title: <>Choice Three:</>,
@@ -142,6 +199,9 @@ const choices = [
         body: <></>
       }
     ]
+  },{
+    title: <>OK, strategy is nice -- what about planning?</>,
+    subHeader: <>See the <Link href="/games/">games we're planning now</Link>!</>,
   }
 ]
 
@@ -154,16 +214,15 @@ const About: React.FC = () => {
       <Typography
         variant="h1"
         sx={{
-          mb: 2
+          mb: 2,
+          fontWeight: "bold",
+          textTransform: "uppercase"
         }}
       >
         New Noise Works
       </Typography>
       <Typography
         variant="h2"
-        sx={{
-          mb: 8
-        }}
       >
         Now Producing a Higher Ground
       </Typography>
@@ -231,7 +290,7 @@ const About: React.FC = () => {
     }, i) => {
       const Component = i % 2 !== 0 ? HomeContainer : HomeContainerAlt
 
-      return <Component maxWidth={i < 5 ? 'lg' : 'xl'} key={`${title}-${subHeader}`}>
+      return <Component maxWidth={i !== 5 ? 'lg' : 'xl'} key={`${title}-${subHeader}`}>
         <Typography
           variant="h4"
           fontWeight="bold"

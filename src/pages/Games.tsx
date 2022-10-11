@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Container, Grid, IconButton, IconButtonProps, Typography } from '@mui/material'
+import { Avatar, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Container, Grid, IconButton, IconButtonProps, Link, Typography } from '@mui/material'
 import { Favorite as FavoriteIcon, Share as ShareIcon, ExpandMore as ExpandMoreIcon } from '@mui/icons-material'
 import styled from '@mui/system/styled'
 
@@ -32,8 +32,8 @@ const gamesData = [
   {
     avatarText: "TPL",
     title: "The Promised Land",
-    subheader: <><a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">Playable</a> Dev Build</>,
-    desc: <>A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm <a href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">now</a>.</>,
+    subheader: <><Link href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">Playable</Link> Dev Build</>,
+    desc: <>A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm <Link href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">now</Link>.</>,
     funding: "$150k-750k+",
     details: <>
       <Typography>Method:</Typography>
