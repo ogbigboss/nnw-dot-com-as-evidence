@@ -39,7 +39,7 @@ const choices = [
   {
     title: <>Choice One:</>,
     subHeader: <>Sell video games to a pre-existing and thriving "indie gaming" community, saving AAA for another day.</>,
-    victory: <>Victory is viability</>,
+    victory: <><em><strong>Victory is</strong></em> viability.</>,
     subChoices: [
       {
         title: <>Choice One.One:</>,
@@ -88,25 +88,25 @@ const choices = [
   {
     title: <>Choice Two:</>,
     subHeader: <>Publicly route a percentage of the revenue to organizations of your choice helping humans.</>,
-    victory: <>Victory is tax verifiable support.</>,
+    victory: <><em><strong>Victory is</strong></em> tax verifiable support.</>,
     subChoices: []
   },
   {
     title: <>Choice One + Two =</>,
     subHeader: <>A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."</>,
-    victory: <>Victory is gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.</>,
+    victory: <><em><strong>Victory is</strong></em> gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.</>,
     subChoices: []
   },
   {
     title: <>Choice Three:</>,
     subHeader: <>Something smells in this American Idiocracy. Avoid standard investment, growth, and corporate structures in order to scale a good thing without scaming the customers or the workers.</>,
-    victory: <>Victory is honestly just trying something new in this boring @$$, corny AF, D+ country.</>,
+    victory: <><em><strong>Victory is</strong></em> honestly just trying something new in this boring @$$, corny AF, D+ country.</>,
     subChoices: []
   },
   {
     title: <>Choice One + Two + Three = Winning:</>,
     subHeader: <>Make games while paying animators, developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.</>,
-    victory: <>Victory is the unhindered growth of an idea - not a limited set of social opportunities. How drab.</>,
+    victory: <><em><strong>Victory is</strong></em> the unhindered growth of an idea - not a limited set of social opportunities. How drab.</>,
     subChoices: []
   },
   {
@@ -221,6 +221,7 @@ const About: React.FC = () => {
       return <Component maxWidth="xl" key={`${title}-${subHeader}`}>
         <Typography
           variant="h4"
+          fontWeight="bold"
         >
           {title}
         </Typography>
