@@ -81,6 +81,32 @@ const gamesData = [
         aside for 10 minutes.
       </Typography>
     </>
+  },{
+    avatarText: "TUB",
+    title: "Harriet Tubman: The Game",
+    subheader: "Fundraising",
+    funding: "Bank robberies",
+    desc: "Based on real life, with a twist on who murders-to-save-the-day (the twist is in the game, not in real life). Inspired by the Hitm*n series.",
+    details: <>
+      <Typography>Method:</Typography>
+      <Typography>
+        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
+        aside for 10 minutes.
+      </Typography>
+    </>
+  },{
+    avatarText: "NNW",
+    title: "This \"game studio\" as a business",
+    subheader: "Ideating, Delusioning",
+    funding: "Federal Entraptertainment",
+    desc: "This is probably a bad idea, in that it will fail. In America, that means it needs funding! How else can we find out? Jack off gesticulation!",
+    details: <>
+      <Typography>Method:</Typography>
+      <Typography>
+        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
+        aside for 10 minutes.
+      </Typography>
+    </>
   },
 ]
 
@@ -95,7 +121,7 @@ const Games: React.FC = () => {
       <Grid
         container
         spacing={{ xs: 4, sm: 4 }}
-        columns={{ xs: 1, sm: 8, lg: 16 }}
+        columns={{ xs: 1, sm: 8, lg: 12 }}
       >
 				{gamesData.map(({
           avatarText,

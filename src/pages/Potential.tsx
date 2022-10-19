@@ -122,8 +122,6 @@ const choices = [
     subHeader: <>A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."<br /><br />Furthermore, free to play games allow those without to support causes simply by playing, all proven by aforementioned "capitalism".</>,
     victory: <>
       <em><strong>Victory is</strong></em> gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.
-      <br /><br />
-      Also, we'll still have violent games, social games, maybe even socially violent games, eventually, probably. Just saying, we're not bad at those.
     </>,
     subChoices: [
       {
@@ -145,22 +143,13 @@ const choices = [
       },
       {
         title: <>(One + Two).Three:</>,
-        subHeader: <>Gamers disdain toxic game developers</>,
+        subHeader: <>Social causes provide marketing ops</>,
         body: <>
           <Typography paragraph>
-            Look, I can obviously piss some people off. But maybe if I'm too busy and happy I'd shut the f*** up you dig? Besides, I'm trying to do a good thing here, people'll get it.
+            Look -- marketing is expensive. All groups focused on social issues know this. The f*ck you think I said co opt for? See the financials above, it's all above the table (your honor, I swear!).
           </Typography>
         </>
       },
-      // {
-      //   title: <>(One + Two).Three:</>,
-      //   subHeader: <>Social causes provide marketing ops</>,
-      //   body: <>
-      //     <Typography paragraph>
-      //       Look -- marketing is expensive. All groups focused on social issues know this. The fuck you think I said co opt for? See the financials above, it's all above the table
-      //     </Typography>
-      //   </>
-      // },
     ]
   },
   {
