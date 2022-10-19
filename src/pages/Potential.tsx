@@ -208,21 +208,21 @@ const choices = [
       {
         title: <>Vets etc.:</>,
         subHeader: <>
-          Government workers and those formerly detained by the government that the government can't support <small>(any longer, in the moment, "etc.")</small>
+          Government workers and those formerly detained by the government that the government can't support <small>(any longer, in the moment, "etc.")</small>. You ever walk past the thin blue line? It's a pretty big grey area. You might need a hand!
         </>,
         body: <></>
       },
       {
         title: <>The Broken Hearted:</>,
         subHeader: <>
-          Mental health, substance abuse, victims of sexual violence -- the symptoms of societies led by broken families shouldn't be a matter of charity -- but it isn't something with sufficient support either
+          Mental health, substance abuse, victims of sexual violence -- the symptoms of societies led by broken families shouldn't be a matter of charity -- but it isn't something with sufficient support either.
         </>,
         body: <></>
       },
       {
         title: <>The Hearted Broke:</>,
         subHeader: <>
-            Many have been left behind because of how they live - LGBTQ <small>(#notallstr8s)</small>, the disabled, many indigineous, non whites <small>(#notallwhites)</small> and non males - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anyone</em>)</small>
+            Many have been left behind because of how they live - LGBTQ <small>(#notallstr8s)</small>, the disabled, many indigineous, non whites <small>(#notallwhites)</small> and non males - if your heart beats you shouldn't be without - non human entities too <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anything</em>)</small>.
         </>,
         body: <></>
       },
