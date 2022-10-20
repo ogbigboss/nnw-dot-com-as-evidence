@@ -14,6 +14,8 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   transition: (theme.transitions as any).create('transform', {
     duration: (theme.transitions as any).duration.shortest,
   }),
+  backgroundColor: pink[200],
+  minWidth: 45
 }))
 
 const ExpandMoreContainer = styled(Container)({
