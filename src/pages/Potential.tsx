@@ -234,7 +234,7 @@ const choices = [
   },
   {
     title: <>Choice One + Two + Three = Winning:</>,
-    subHeader: <>Make games while paying animators, developers, designers, QAers, marketers, writers, artists - etc - an above market wage AND all while supporting the world via curtailing traditional investment and corporate mechanics. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.</>,
+    subHeader: <>Make games while paying creators an above market wage all while supporting the world. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.</>,
     victory: <><em><strong>Victory is</strong></em> the unhindered growth of an idea - not a limited set of social opportunities. How drab.</>,
     subChoices: []
   },
@@ -243,32 +243,40 @@ const choices = [
     subHeader: <>You'll be able to choose whom to support and how to balance the donation between several groups, falling under the following four suits:</>,
     subChoices: [
       {
-        title: <>Vets etc.:</>,
-        subHeader: <>
-          Government workers and those formerly detained by the government that the government can't support <small>(any longer, in the moment, "etc.")</small>. You ever walk past the thin blue line? It's a pretty big grey area. You might need a hand!
+        title: <>Vets etc.</>,
+        subHeader: <><em>Guns, cuffs, hoses, garbage, desks... etc!</em></>,
+        body: <>
+          <Typography paragraph>
+            Government workers and those formerly detained by the government that the government can't support (any longer, in the moment, "etc."). You ever walk past the thin blue line? It's a pretty big grey area. You might need a JD, guns, and/or money!
+          </Typography>
         </>,
-        body: <></>
       },
       {
-        title: <>The Broken Hearted:</>,
-        subHeader: <>
-          Mental health, substance abuse, victims of sexual violence -- the symptoms of societies led by broken families shouldn't be a matter of charity -- but it isn't something with sufficient support either.
+        title: <>The Broken Hearted</>,
+        subHeader: <><em>Sex, drugs, rock, AND roll? Too much?</em></>,
+        body: <>
+          <Typography paragraph>
+            Mental health, substance abuse, victims of sexual violence -- the symptoms of societies led by broken families shouldn't be a matter of charity -- but it isn't something with sufficient support either. Help those putting themselves together.
+          </Typography>
         </>,
-        body: <></>
       },
       {
-        title: <>The Hearted Broke:</>,
-        subHeader: <>
-            Many have been left behind because of how they live - LGBTQ <small>(#notallstr8s)</small>, the disabled, many indigineous, non whites <small>(#notallwhites)</small> and non males - if your heart beats you shouldn't be without - non human entities too <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anything</em>)</small>.
+        title: <>The Hearted Broke</>,
+        subHeader: <><em>If it was just jokes they wouldn't be broke</em></>,
+        body: <>
+          <Typography paragraph>
+            Many are demographically disenfranchised - LGBTQ (#notallstr8s), many disabled, indigineous, non whites (#notallwhites) non males, animals - if your heart beats you shouldn't be without <small>(unless you f*** my s*** up, read the fine print, and that goes for <em>anything</em>)</small>.
+          </Typography>
         </>,
-        body: <></>
       },
       {
-        title: <>The Empirically Correct:</>,
-        subHeader: <>
-          We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** <small>(or something, idk, I'm often incorrect)</small>. This would be like that! Sort of.
+        title: <>The Empirically Correct</>,
+        subHeader: <><em>Testing... testing... testing...</em></>,
+        body: <>
+          <Typography paragraph>
+            We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** (or something, idk, I'm often incorrect). This would be like that! Sort of.
+          </Typography>
         </>,
-        body: <></>
       }
     ]
   },{
@@ -360,7 +368,8 @@ const About: React.FC = () => {
       title,
       victory
     }, i) => {
-      const Component = i % 2 !== 0 ? HomeContainer : HomeContainerAlt
+      const isAlt = i % 2 === 0
+      const Component = isAlt ? HomeContainerAlt : HomeContainer
 
       return <Component maxWidth={i !== 5 ? 'lg' : 'xl'} key={`${title}-${subHeader}`}>
         <Typography
@@ -384,18 +393,20 @@ const About: React.FC = () => {
         }
         {subChoices && subChoices.length > 0 && (
           <ExpandMoreContainer>
-            <ExpandMore
-              expand={expanded[i]}
-              onClick={() => {
-                const expandedClone = expanded.slice()
-                expandedClone[i] = !expanded[i]
-                setExpanded(expandedClone)
-              }}
-              aria-expanded={expanded[i]}
-              aria-label="show more"
-            >
-            ...
-            </ExpandMore>
+            {subChoices && subChoices.length > 0 && subChoices.length < 4 && (
+              <ExpandMore
+                expand={expanded[i]}
+                onClick={() => {
+                  const expandedClone = expanded.slice()
+                  expandedClone[i] = !expanded[i]
+                  setExpanded(expandedClone)
+                }}
+                aria-expanded={expanded[i]}
+                aria-label="show more"
+              >
+              ...
+              </ExpandMore>
+            )}
           </ExpandMoreContainer>
         )}
         <Collapse in={expanded[i]} timeout="auto" unmountOnExit>
@@ -411,10 +422,15 @@ const About: React.FC = () => {
                 lg
                 xs={12}
               >
-                <Card>
+                <Card
+                  variant={isAlt ? undefined : "outlined"}
+                >
                   <CardHeader
                     title={title}
                     subheader={subHeader}
+                    sx={{
+                      pb: 0
+                    }}
                   />
                   <CardContent>
                     {body && body}
