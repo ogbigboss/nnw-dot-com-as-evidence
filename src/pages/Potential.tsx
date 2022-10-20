@@ -237,7 +237,7 @@ const choices = [
   {
     title: <>Choice One + Two + Three = Winning:</>,
     subHeader: <>Make games while paying creators an above market wage all while supporting the world. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.</>,
-    victory: <><em><strong>Victory is</strong></em> the unhindered growth of an idea - not a limited set of social opportunities. How drab.</>,
+    victory: <><em><strong>Victory is</strong></em> the unhindered growth of an idea - not a limited set of social opportunities. How drab. And what a <em>terrible</em> lie!</>,
     subChoices: []
   },
   {
