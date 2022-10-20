@@ -147,7 +147,7 @@ const choices = [
             Blame it on inequality, inefficiency, or the alcohol - not everyone has free money, even if they have the time. The "Free To Play" business model allows communities to play a game to help raise money.
           </Typography>
           <Typography paragraph>
-            It's like, those people that show up to bake sales and wait til after the business parts to eat / "steal" / reappropriate food that sell.
+            Like those people that show up to bake sales and wait til after the business parts to eat / "steal" / reappropriate food that didn't sell.
           </Typography>
           <Typography paragraph>
             Or, like non drinkers at bars. Saloons? Anyway idiots, it takes a village!
@@ -196,22 +196,25 @@ const choices = [
         subHeader: <>Or, there is no business "as usual"</>,
         body: <>
           <Typography paragraph>
-            The truth of all businesses, for their history, is they form their own organizational structure. Governments exist largely in the relationship of taxes and possible criminal behaviors, which, we'd avoid.
+            The truth of all businesses is they form their own organizational structure. Governments exist largely in the relationship of taxes and criminal behaviors, which, we'd avoid.
           </Typography>
           <Typography paragraph>
-            Outside of outright facist governments, there is rarely so much regulation such to stifle innovation completely. Hopefully not in America, right?
+            Outside of outright facism, there is rarely so much regulation such to stifle innovation completely. Certainly not in my America!
+          </Typography>
+          <Typography paragraph>
+            New things are scary, and they don't always work. But that's not the hard part. The hard part is letting go of things that work for you, but don't for others, and in a way that proves nothing more than a need to move on from your past, or those people. That's not so bad.
           </Typography>
         </>
       },
       {
         title: <>Choice Three.Two</>,
-        subHeader: <>Co Ops have scaled globally</>,
+        subHeader: <>Internal decisions must be internally decided</>,
         body: <>
           <Typography paragraph>
             Organizational structure for NNW is a big decision to make. For inspiration we'd seek successful models, and co-ops have proven to be tenable, scalable, lucrative for investors, as well as hospitable to it's employees. Mondragon is a great example, posting revenue figures in the billions.
           </Typography>
           <Typography paragraph>
-            That said, there are a lot of ways to skin this... well, you get it.
+            Tax and investment identities as tactics aside, speaking strategically the goal would be to insure all internal decisions would be made with mutual correspondence. If employees have the best internal information to be competitive, the company will mirror this externally with less friction / meetings.
           </Typography>
         </>
       },
