@@ -190,8 +190,8 @@ const choices = [
   },
   {
     title: <>Choice Three:</>,
-    subHeader: <>Something smells in this American Idiocracy. Avoid the bad deal business as usual bu11$h!t in order to scale a good thing without scamming the customers, the workers, and even the (losers get) lucky (sometimes) investors.</>,
-    victory: <><em><strong>Victory is</strong></em> honestly just trying something new in this boring @$$, corny AF, D+ country.</>,
+    subHeader: <>Something smells in this American Idiocracy. Avoid the bad deal business as usual bu11$h!t to scale a good thing without scamming the customers, the workers, and even the (losers get) lucky (sometimes) investors.</>,
+    victory: <><em><strong>Victory is</strong></em> trying something new in this boring @$$, corny AF, D+ country.</>,
     subChoices: [
       {
         title: <>Choice Three.One</>,
