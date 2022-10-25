@@ -323,7 +323,7 @@ const About: React.FC = () => {
       >
         Making Video Games that Make the World Better, With Money
       </Typography>
-      <ExpandMoreContainer>
+      <ExpandMoreContainer sx={{opacity: 0, height: 5}}>
         <ExpandMore
           expand={mojo}
           onClick={() => setMojo(!mojo)}
