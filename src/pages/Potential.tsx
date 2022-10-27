@@ -1,6 +1,19 @@
 import React from 'react'
 import { Card, CardHeader, CardContent, Collapse, Container, Grid, IconButton, IconButtonProps, Link, Typography } from '@mui/material'
 import {
+  MicOffTwoTone as HeroIconBase,
+  AutoGraphSharp as OnePointOneIcon,
+  AcUnitSharp as OnePointTwoIcon,
+  SignLanguageSharp as OnePointThreeIcon,
+  CreditScoreSharp as TwoPointOneIcon,
+  LockOpenSharp as TwoPointTwoIcon,
+  CurrencyExchangeSharp as TwoPointThreeIcon,
+  SportsBarSharp as OnePlusTwoPointOneIcon,
+  ThumbUpAltSharp as OnePlusTwoPointTwoIcon,
+  AddBusinessSharp as OnePlusTwoPointThreeIcon,
+  StarHalfSharp as ThreePointOneIcon,
+  Diversity1Sharp as ThreePointTwoIcon,
+  LocalFireDepartmentSharp as ThreePointThreeIcon,
   ElectricalServicesTwoTone as SpadesIcon,
   VolunteerActivismTwoTone as HeartsIcon,
   DiamondTwoTone as DiamondsIcon,
@@ -38,6 +51,7 @@ const ExpandMoreContainer = styled(Container)({
 const HeroContainer = styled(Container)({
   paddingTop: 128,
   paddingBottom: 196,
+  position: 'relative'
 })
 
 const FullContainer = styled(HeroContainer)({
@@ -52,7 +66,8 @@ const HomeContainer = styled(HeroContainer)({
 })
 
 const HomeContainerAlt = styled(HomeContainer)({
-  backgroundColor: pink[100], })
+  backgroundColor: pink[100]
+})
 
 const LastContainer = styled(HomeContainerAlt)({
   backgroundColor: pink[100],
@@ -61,6 +76,18 @@ const LastContainer = styled(HomeContainerAlt)({
   borderTopColor: green[300],
   borderTopStyle: "solid"
 })
+
+const HeroIcon = styled(HeroIconBase)({
+  position: 'absolute',
+  bottom: 80,
+  right: 66.6,
+  fontSize: "2000%",
+  zIndex: -1
+})
+
+HeroIcon.defaultProps = {
+  color: "secondary"
+}
 
 interface Choice {
   title?: React.ReactElement | string
@@ -84,7 +111,8 @@ const choices: Choice[] = [
     victory: <><em><strong>Victory is</strong></em> viability.</>,
     subChoices: [
       {
-        title: <>Choice One.One:</>,
+        title: <Typography variant="h5">Choice One.One:</Typography>,
+        avatar: <OnePointOneIcon color="secondary" />,
         subHeader: <>Position for a scalable financial "hit"</>,
         body: <>
           <Typography paragraph>
@@ -99,7 +127,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>Choice One.Two:</>,
+        title: <Typography variant="h5">Choice One.Two:</Typography>,
+        avatar: <OnePointTwoIcon color="success" />,
         subHeader: <>Target submarkets w/ unique offerings</>,
         body: <>
           <Typography paragraph>
@@ -114,7 +143,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>Choice One.Three:</>,
+        title: <Typography variant="h5">Choice One.Three:</Typography>,
+        avatar: <OnePointThreeIcon color="primary" />,
         subHeader: <>Use skills to beat competitors on cost</>,
         body: <>
           <Typography paragraph>
@@ -136,7 +166,8 @@ const choices: Choice[] = [
     victory: <><em><strong>Victory is</strong></em> tax verifiable support.</>,
     subChoices: [
       {
-        title: <>Choice Two.One:</>,
+        title: <Typography variant="h5">Choice Two.One:</Typography>,
+        avatar: <TwoPointOneIcon color="success" />,
         subHeader: <>Credit card processors route funds</>,
         body: <>
           <Typography paragraph>
@@ -148,7 +179,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>Choice Two.Two:</>,
+        title: <Typography variant="h5">Choice Two.Two:</Typography>,
+        avatar: <TwoPointTwoIcon color="secondary" />,
         subHeader: <>Financial transparency as a default</>,
         body: <>
           <Typography paragraph>
@@ -160,7 +192,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>Choice Two.Three:</>,
+        title: <Typography variant="h5">Choice Two.Three:</Typography>,
+        avatar: <TwoPointThreeIcon />,
         subHeader: <>Donations qualify as tax deducations</>,
         body: <>
           <Typography paragraph>
@@ -181,7 +214,8 @@ const choices: Choice[] = [
     </>,
     subChoices: [
       {
-        title: <>(One + Two).One:</>,
+        title: <Typography variant="h5">(One + Two).One:</Typography>,
+        avatar: <OnePlusTwoPointOneIcon color="secondary" />,
         subHeader: <>Free to play becomes free to support</>,
         body: <>
           <Typography paragraph>
@@ -196,7 +230,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>(One + Two).Two:</>,
+        title: <Typography variant="h5">(One + Two).Two:</Typography>,
+        avatar: <OnePlusTwoPointTwoIcon />,
         subHeader: <>Gamers ♥♥♥ good, but prefer games</>,
         body: <>
           <Typography paragraph>
@@ -211,7 +246,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>(One + Two).Three:</>,
+        title: <Typography variant="h5">(One + Two).Three:</Typography>,
+        avatar: <OnePlusTwoPointThreeIcon color="success" />,
         subHeader: <>Social causes provide marketing ops</>,
         body: <>
           <Typography paragraph>
@@ -233,7 +269,8 @@ const choices: Choice[] = [
     victory: <><em><strong>Victory is</strong></em> trying something new in this boring @$$, corny AF, D+ country.</>,
     subChoices: [
       {
-        title: <>Choice Three.One</>,
+        title: <Typography variant="h5">Choice Three.One</Typography>,
+        avatar: <ThreePointOneIcon />,
         subHeader: <>Or, there is no business "as usual"</>,
         body: <>
           <Typography paragraph>
@@ -248,7 +285,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>Choice Three.Two</>,
+        title: <Typography variant="h5">Choice Three.Two</Typography>,
+        avatar: <ThreePointTwoIcon color="secondary" />,
         subHeader: <>Internal decisions must be internally decided</>,
         body: <>
           <Typography paragraph>
@@ -260,7 +298,8 @@ const choices: Choice[] = [
         </>
       },
       {
-        title: <>Choice Three.Three</>,
+        title: <Typography variant="h5">Choice Three.Three</Typography>,
+        avatar: <ThreePointThreeIcon color="success" />,
         subHeader: <>Content creation means paying for it</>,
         body: <>
           <Typography paragraph>
@@ -352,6 +391,7 @@ const About: React.FC = () => {
       >
         Now Producing a Higher Ground
       </Typography>
+      <HeroIcon />
     </FullContainer>
     <HomeContainerAlt maxWidth="xl" style={{ textAlign: "left" }}>
       <Typography
