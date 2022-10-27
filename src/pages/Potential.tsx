@@ -1,7 +1,16 @@
 import React from 'react'
-import { Card, CardHeader, CardContent, Collapse, Container, Grid, IconButton, IconButtonProps, Link, Typography } from '@mui/material'
+import { Card, CardHeader, CardContent, Collapse, Container, Grid, IconButton, IconButtonProps, Link, 
+  Typography as TypographyBase
+} from '@mui/material'
 import {
   MicOffTwoTone as HeroIconBase,
+  ChurchOutlined as StrategyIconBase,
+  ScaleOutlined as ChoiceOneIconBase,
+  AltRouteOutlined as ChoiceTwoIconBase,
+  FenceSharp as ChoiceOnePlusTwoIconBase,
+  FitnessCenterSharp as ChoiceThreeIconBase,
+  BackupSharp as ChoiceOnePlusTwoPlusThreeIconBase,
+  TrackChangesSharp as PlanningIconBase,
   AutoGraphSharp as OnePointOneIcon,
   AcUnitSharp as OnePointTwoIcon,
   SignLanguageSharp as OnePointThreeIcon,
@@ -20,7 +29,24 @@ import {
   AutoFixHighSharp as PutzesIcon
 } from '@mui/icons-material';
 import styled from '@mui/system/styled'
+import theme from '../theme'
 import { pink, green } from '@mui/material/colors'
+
+interface Choice {
+  title?: React.ReactElement | string
+  subHeader?: React.ReactElement | string
+  victory?: React.ReactElement | string
+  subChoices?: SubChoice[]
+  isSupport?: boolean
+  icon?: React.ReactElement | string
+}
+
+interface SubChoice {
+  title?: React.ReactElement | string
+  subHeader?: React.ReactElement | string
+  body?: React.ReactElement | string
+  avatar?: React.ReactElement | string
+}
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean
@@ -41,6 +67,11 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
     borderColor: green[500],
   }
 }))
+
+const Typography = styled(TypographyBase)({
+  zIndex: 1,
+  position: 'relative',
+})
 
 const ExpandMoreContainer = styled(Container)({
   textAlign: 'center',
@@ -66,7 +97,7 @@ const HomeContainer = styled(HeroContainer)({
 })
 
 const HomeContainerAlt = styled(HomeContainer)({
-  backgroundColor: pink[100]
+  backgroundColor: pink[50]
 })
 
 const LastContainer = styled(HomeContainerAlt)({
@@ -77,37 +108,47 @@ const LastContainer = styled(HomeContainerAlt)({
   borderTopStyle: "solid"
 })
 
-const HeroIcon = styled(HeroIconBase)({
+const heroIconStyles = {
   position: 'absolute',
-  bottom: 80,
-  right: 66.6,
-  fontSize: "2000%",
-  zIndex: -1
-})
-
-HeroIcon.defaultProps = {
-  color: "secondary"
+  bottom: 20,
+  fontSize: "1000%",
+  zIndex: 0,
+  textAlign: 'center',
+  width: 'calc(100% - 32px)',
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "2000%",
+    bottom: 80,
+    right: 66.6,
+    width: 'auto',
+  }
 }
 
-interface Choice {
-  title?: React.ReactElement | string
-  subHeader?: React.ReactElement | string
-  victory?: React.ReactElement | string
-  subChoices?: SubChoice[]
-  isSupport?: boolean
+const choiceIconStyles = {
+  ...heroIconStyles,
+  opacity: 0.8,
+  bottom: 10,
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "1000%",
+    bottom: 80,
+    right: 66.6,
+    width: 'auto',
+  }
 }
 
-interface SubChoice {
-  title?: React.ReactElement | string
-  subHeader?: React.ReactElement | string
-  body?: React.ReactElement | string
-  avatar?: React.ReactElement | string
-}
+const HeroIcon = styled(HeroIconBase)(Object.assign(heroIconStyles))
+const StrategyIcon = styled(StrategyIconBase)(Object.assign(heroIconStyles))
+const ChoiceOneIcon = styled(ChoiceOneIconBase)(Object.assign(choiceIconStyles))
+const ChoiceTwoIcon = styled(ChoiceTwoIconBase)(Object.assign(choiceIconStyles))
+const ChoiceOnePlusTwoIcon = styled(ChoiceOnePlusTwoIconBase)(Object.assign(choiceIconStyles))
+const ChoiceThreeIcon = styled(ChoiceThreeIconBase)(Object.assign(choiceIconStyles))
+const ChoiceOnePlusTwoPlusThreeIcon = styled(ChoiceOnePlusTwoPlusThreeIconBase)(Object.assign(choiceIconStyles))
+const PlanningIcon = styled(PlanningIconBase)(Object.assign(choiceIconStyles))
 
 const choices: Choice[] = [
   {
     title: <>Choice One:</>,
     subHeader: <>Sell video games to a pre-existing and thriving "indie gaming" community, saving AAA for another day.</>,
+    icon: <ChoiceOneIcon color="success" />,
     victory: <><em><strong>Victory is</strong></em> viability.</>,
     subChoices: [
       {
@@ -163,6 +204,7 @@ const choices: Choice[] = [
   {
     title: <>Choice Two:</>,
     subHeader: <>Publicly route a percentage of the revenue to organizations of your choice helping make the world you'd like to see, all while the IRS is watching.</>,
+    icon: <ChoiceTwoIcon color="secondary" />,
     victory: <><em><strong>Victory is</strong></em> tax verifiable support.</>,
     subChoices: [
       {
@@ -209,6 +251,7 @@ const choices: Choice[] = [
   {
     title: <>Choice One + Two =</>,
     subHeader: <>A co-opting of social issues via direct financial support will result in a gaming community that plays games to help the world, instead of playing at politics, and all while "doing a capitalism."</>,
+    icon: <ChoiceOnePlusTwoIcon color="success" />,
     victory: <>
       <em><strong>Victory is</strong></em> gamers feeling good about being good. I'll keep the brats behind the gate, don't worry.
     </>,
@@ -266,6 +309,7 @@ const choices: Choice[] = [
   {
     title: <>Choice Three:</>,
     subHeader: <>Something smells in this American Idiocracy. Avoid the bad deal business as usual bu11$h!t to scale a good thing without scamming the customers, the workers, and even the (losers get) lucky (sometimes) investors.</>,
+    icon: <ChoiceThreeIcon color="secondary" />,
     victory: <><em><strong>Victory is</strong></em> trying something new in this boring @$$, corny AF, D+ country.</>,
     subChoices: [
       {
@@ -315,6 +359,7 @@ const choices: Choice[] = [
   {
     title: <>Choice One + Two + Three = Winning:</>,
     subHeader: <>Make games while paying creators an above market wage all while supporting the world. Call it an upgrade. If competition comes: good, good things are good. And anyway, Upgrayedd gonna <em>get</em> his money.</>,
+    icon: <ChoiceOnePlusTwoPlusThreeIcon color="success" />,
     victory: <><em><strong>Victory is</strong></em> the unhindered growth of an idea - not a limited set of social opportunities. How drab. And what a <em>terrible</em> lie!</>,
     subChoices: []
   },
@@ -367,6 +412,7 @@ const choices: Choice[] = [
   },{
     title: <>OK, strategy is nice -- what about planning?</>,
     subHeader: <>See the <Link href="/games/">games we're planning now</Link>!</>,
+    icon: <PlanningIcon color="success" />,
   }
 ]
 
@@ -391,7 +437,7 @@ const About: React.FC = () => {
       >
         Now Producing a Higher Ground
       </Typography>
-      <HeroIcon />
+      <HeroIcon color="secondary" />
     </FullContainer>
     <HomeContainerAlt maxWidth="xl" style={{ textAlign: "left" }}>
       <Typography
@@ -407,6 +453,7 @@ const About: React.FC = () => {
       >
         Making Video Games that Make the World Better, With Money
       </Typography>
+      <StrategyIcon color="success" />
       <ExpandMoreContainer sx={{
         height: 5
       }}>
@@ -465,6 +512,7 @@ const About: React.FC = () => {
       title,
       victory,
       isSupport,
+      icon,
     }, i) => {
       const isAlt = i % 2 === 0
 
@@ -528,10 +576,11 @@ const About: React.FC = () => {
               <Grid
                 item
                 key={`${title}-${subHeader}`}
-                lg
+                xl
+                md={6}
                 xs={12}
               >
-                <Card variant={isAlt ? undefined : "outlined"}>
+                <Card variant={isAlt ? undefined : "outlined"} sx={{ zIndex: 2, position: 'relative' }}>
                   <CardHeader
                     title={title}
                     avatar={avatar ? avatar : undefined}
@@ -548,6 +597,7 @@ const About: React.FC = () => {
             ))}
           </Grid>
         </Collapse>
+        {icon && icon}
       </Component>
     })}
   </>
