@@ -1,7 +1,13 @@
 import React from 'react'
 import { Card, CardHeader, CardContent, Collapse, Container, Grid, IconButton, IconButtonProps, Link, Typography } from '@mui/material'
+import {
+  ElectricalServicesTwoTone as SpadesIcon,
+  VolunteerActivismTwoTone as HeartsIcon,
+  DiamondTwoTone as DiamondsIcon,
+  AutoFixHighSharp as PutzesIcon
+} from '@mui/icons-material';
 import styled from '@mui/system/styled'
-import { pink } from '@mui/material/colors'
+import { pink, green } from '@mui/material/colors'
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean
@@ -10,12 +16,17 @@ interface ExpandMoreProps extends IconButtonProps {
 const ExpandMore = styled((props: ExpandMoreProps) => {
   const { expand, ...other } = props
   return <IconButton {...other} />
-})(({ theme, expand }) => ({
+})(({ theme }) => ({
   transition: (theme.transitions as any).create('transform', {
     duration: (theme.transitions as any).duration.shortest,
   }),
   backgroundColor: pink[200],
-  minWidth: 45
+  border: `2px solid ${pink[200]}`,
+  minWidth: 49,
+  ':hover': {
+    backgroundColor: pink[200],
+    borderColor: green[500],
+  }
 }))
 
 const ExpandMoreContainer = styled(Container)({
@@ -29,16 +40,44 @@ const HeroContainer = styled(Container)({
   paddingBottom: 196,
 })
 
+const FullContainer = styled(HeroContainer)({
+  borderBottomSize: 5,
+  borderBottomColor: green[300],
+  borderBottomStyle: "solid"
+})
+
 const HomeContainer = styled(HeroContainer)({
   paddingTop: 128,
-  paddingBottom: 128
+  paddingBottom: 128,
 })
 
 const HomeContainerAlt = styled(HomeContainer)({
+  backgroundColor: pink[100], })
+
+const LastContainer = styled(HomeContainerAlt)({
   backgroundColor: pink[100],
+  borderBottomSize: 0,
+  borderTopSize: 5,
+  borderTopColor: green[300],
+  borderTopStyle: "solid"
 })
 
-const choices = [
+interface Choice {
+  title?: React.ReactElement | string
+  subHeader?: React.ReactElement | string
+  victory?: React.ReactElement | string
+  subChoices?: SubChoice[]
+  isSupport?: boolean
+}
+
+interface SubChoice {
+  title?: React.ReactElement | string
+  subHeader?: React.ReactElement | string
+  body?: React.ReactElement | string
+  avatar?: React.ReactElement | string
+}
+
+const choices: Choice[] = [
   {
     title: <>Choice One:</>,
     subHeader: <>Sell video games to a pre-existing and thriving "indie gaming" community, saving AAA for another day.</>,
@@ -241,11 +280,13 @@ const choices = [
     subChoices: []
   },
   {
+    isSupport: true,
     title: <>Who would be supported then?</>,
     subHeader: <>You'll be able to choose whom to support and how to balance the donation between several groups, falling under the following four suits:</>,
     subChoices: [
       {
-        title: <>Vets etc.</>,
+        title: <Typography variant="h5">Vets etc.</Typography>,
+        avatar: <SpadesIcon />,
         subHeader: <><em>Guns, cuffs, hoses, garbage, desks... etc!</em></>,
         body: <>
           <Typography paragraph>
@@ -254,7 +295,8 @@ const choices = [
         </>,
       },
       {
-        title: <>The Broken Hearted</>,
+        title: <Typography variant="h5">The Broken Hearted</Typography>,
+        avatar: <HeartsIcon color="secondary" />,
         subHeader: <><em>Sex, drugs, rock, AND roll? Too much?</em></>,
         body: <>
           <Typography paragraph>
@@ -263,7 +305,18 @@ const choices = [
         </>,
       },
       {
-        title: <>The Hearted Broke</>,
+        title: <Typography variant="h5">The Empirically Correct</Typography>,
+        avatar: <PutzesIcon />,
+        subHeader: <><em>Testing... testing... testing...</em></>,
+        body: <>
+          <Typography paragraph>
+            We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** (or something, idk, I'm often incorrect). This would be like that! Sort of.
+          </Typography>
+        </>,
+      },
+      {
+        title: <Typography variant="h5">The Hearted Broke</Typography>,
+        avatar: <DiamondsIcon color="secondary" />,
         subHeader: <><em>If it was just jokes they wouldn't be broke</em></>,
         body: <>
           <Typography paragraph>
@@ -271,15 +324,6 @@ const choices = [
           </Typography>
         </>,
       },
-      {
-        title: <>The Empirically Correct</>,
-        subHeader: <><em>Testing... testing... testing...</em></>,
-        body: <>
-          <Typography paragraph>
-            We should probably do... more... to prepare for climate change. Even if we're wrong. Just in case. Couldn't hurt. Survivalists like, have lifetime supplies of beans and s*** (or something, idk, I'm often incorrect). This would be like that! Sort of.
-          </Typography>
-        </>,
-      }
     ]
   },{
     title: <>OK, strategy is nice -- what about planning?</>,
@@ -292,7 +336,7 @@ const About: React.FC = () => {
   const [mojo, setMojo] = React.useState<boolean>(false)
 
   return <>
-    <HeroContainer maxWidth="xl">
+    <FullContainer maxWidth="xl">
       <Typography
         variant="h1"
         sx={{
@@ -308,7 +352,7 @@ const About: React.FC = () => {
       >
         Now Producing a Higher Ground
       </Typography>
-    </HeroContainer>
+    </FullContainer>
     <HomeContainerAlt maxWidth="xl" style={{ textAlign: "left" }}>
       <Typography
         variant="h3"
@@ -323,12 +367,23 @@ const About: React.FC = () => {
       >
         Making Video Games that Make the World Better, With Money
       </Typography>
-      <ExpandMoreContainer sx={{opacity: 0, height: 5}}>
+      <ExpandMoreContainer sx={{
+        height: 5
+      }}>
         <ExpandMore
           expand={mojo}
           onClick={() => setMojo(!mojo)}
           aria-expanded={mojo}
           aria-label="show more"
+          sx={{
+            opacity: 0,
+            ':hover': {
+              opacity: 1,
+              ':first-child': {
+                backgroundColor: green[300],
+              }
+            }
+          }}
         >
         ...
         </ExpandMore>
@@ -368,10 +423,22 @@ const About: React.FC = () => {
       subHeader,
       subChoices,
       title,
-      victory
+      victory,
+      isSupport,
     }, i) => {
       const isAlt = i % 2 === 0
-      const Component = isAlt ? HomeContainerAlt : HomeContainer
+
+      let Component = HomeContainer
+
+      if (isAlt) {
+        Component = HomeContainerAlt
+      } else if (isSupport) {
+        Component = HeroContainer
+      }
+
+      if (i === choices.length - 1) {
+        Component = LastContainer
+      }
 
       return <Component maxWidth={i !== 5 ? 'lg' : 'xl'} key={`${title}-${subHeader}`}>
         <Typography
@@ -417,18 +484,17 @@ const About: React.FC = () => {
             spacing={4}
             textAlign="left"
           >
-            {subChoices && subChoices.map(({ body, subHeader, title }) => (
+            {subChoices && subChoices.map(({ body, subHeader, title, avatar }) => (
               <Grid
                 item
                 key={`${title}-${subHeader}`}
                 lg
                 xs={12}
               >
-                <Card
-                  variant={isAlt ? undefined : "outlined"}
-                >
+                <Card variant={isAlt ? undefined : "outlined"}>
                   <CardHeader
                     title={title}
+                    avatar={avatar ? avatar : undefined}
                     subheader={subHeader}
                     sx={{
                       pb: 0

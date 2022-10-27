@@ -1,4 +1,6 @@
 import { AppBar, Container, Toolbar, Typography } from '@mui/material'
+import { green } from '@mui/material/colors'
+
 import theme from '../theme'
 
 interface NNWAppBarProps {
@@ -19,7 +21,9 @@ function getRandomJoke() {
 
 const NNWAppBar: React.FC<NNWAppBarProps> = ({ msg }) => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{
+      borderTop: `3px solid ${green[500]}`
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters
           sx={{

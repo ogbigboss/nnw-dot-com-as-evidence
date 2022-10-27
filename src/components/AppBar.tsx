@@ -57,11 +57,17 @@ const NNWAppBar: React.FC = () => {
                 component={Link}
                 color="secondary"
               >Pay me</Button>
-              <Button
-                href="/potential"
-                component={Link}
-                color="secondary"
-              >Old</Button>
+              <span dangerouslySetInnerHTML={{
+                __html: `
+                  <!--
+                  <Button
+                    href="/potential"
+                    component={Link}
+                    color="secondary"
+                  >Old</Button>
+                  -->
+                `
+              }} />
             </Grid>
           </Grid>
         </Toolbar>
