@@ -34,7 +34,7 @@ const gamesData = [
     title: "The Promised Land",
     subheader: <><Link href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">Playable</Link> Dev Build</>,
     desc: <>A persistent multiplayer pixel art farming game set in a future that's not so bad. Constructing the first realm <Link href="http://playthepromisedland.com/" target="_blank" rel="noreferrer">now</Link>.</>,
-    funding: "$150k-750k+",
+    funding: "$250k-1m+",
     details: <>
       <Typography>Method:</Typography>
       <Typography>
@@ -46,7 +46,7 @@ const gamesData = [
     avatarText: "TS",
     title: "Tower Story: First Story",
     subheader: "In Development",
-    funding: "$100k-500k+",
+    funding: "$250k-1m+",
     desc: "A 3D Tower builder akin to S*mT*w*r with S*ms like elements. Make your dream tower full of all kinds of stories!",
     details: <>
       <Typography>Method:</Typography>
@@ -59,7 +59,7 @@ const gamesData = [
     avatarText: "TPM",
     title: "FTSP: The Piano Man",
     subheader: "Concepting",
-    funding: "$25k-50k+",
+    funding: "$125k-500k+",
     desc: "A robo detective story told through the second person's POV. Figure out the algorithms before they get in your head!",
     details: <>
       <Typography>Method:</Typography>
@@ -72,7 +72,7 @@ const gamesData = [
     avatarText: "VTN",
     title: "Voodoo Trolluhnomics",
     subheader: "Concepting",
-    funding: "$25k-50k+",
+    funding: "$125k-500k+",
     desc: "What happens when everyone's a data zombie in a cyber dystopia and you're a witch with an analog vibe? You deicide!",
     details: <>
       <Typography>Method:</Typography>
@@ -98,7 +98,7 @@ const gamesData = [
     avatarText: "NNW",
     title: "This \"game studio\" as a business",
     subheader: "Ideating, Delusioning",
-    funding: "Federal Entraptertainment",
+    funding: "Corpo counter trifling",
     desc: "This is probably a bad idea, in that it will fail. In America, that means it needs funding! How else can we find out? Jack off gesticulation!",
     details: <>
       <Typography>Method:</Typography>
@@ -175,7 +175,7 @@ const Games: React.FC = () => {
                   <ShareIcon />
                 </IconButton>
                 <FundType>
-                  Funds needed: {funding}
+                  Funding needs: {funding}
                 </FundType>
                 <ExpandMore
                   expand={expanded[i]}
