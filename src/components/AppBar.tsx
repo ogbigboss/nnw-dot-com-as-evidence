@@ -1,4 +1,5 @@
-import { AppBar, Button, Container, Link, Grid, Toolbar, Typography } from '@mui/material'
+import { AppBar, Button, Container, Link as MUILink, Grid, Toolbar, Typography } from '@mui/material'
+import { Link } from "react-router-dom"
 import styled from '@mui/system/styled'
 import theme from '../theme'
 
@@ -27,9 +28,9 @@ const NNWAppBar: React.FC = () => {
                   fontWeight: "bold",
                 }}
               >
-                <Link href="/" color="secondary">
+                <MUILink component={Link} to="/" color="secondary">
                   New Noise Works
-                </Link>
+                </MUILink>
               </Typography>
             </Grid>
             <Grid item xs={12} md={6} sx={{
@@ -38,22 +39,22 @@ const NNWAppBar: React.FC = () => {
               }
             }}>
               <Button
-                href="/huh-what"
+                to="/huh-what"
                 component={Link}
                 color="secondary"
               >FAQ</Button>
               <Button
-                href="/games"
+                to="/games"
                 component={Link}
                 color="secondary"
               >Games</Button>
               <Button
-                href="/about"
+                to="/about"
                 component={Link}
                 color="secondary"
               >Who</Button>
               <Button
-                href="/support"
+                to="/support"
                 component={Link}
                 color="secondary"
               >Pay me</Button>
@@ -75,12 +76,13 @@ const NNWAppBar: React.FC = () => {
           <Typography color={theme.palette.secondary.light}>
             <em>failures in leadership meant you were following the wrong people</em>&nbsp;
             -&nbsp;
-            <Link
-              href="https://twitter.com/newnoiseworks/"
+            <MUILink
+              component={Link}
+              to="https://twitter.com/newnoiseworks/"
               target="_blank"
               rel="noreferrer"
               color={theme.palette.secondary.light}
-            >follow us on twitter today!</Link>
+            >follow us on twitter today!</MUILink>
           </Typography>
         </MsgToolbar>
       </Container>

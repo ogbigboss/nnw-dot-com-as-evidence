@@ -15,29 +15,49 @@ import Potential from './pages/Potential'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Potential />
+    element: <div>
+      <AppBar />
+      <Potential />
+    </div>
   },
   {
     path: "/huh-what",
-    element: <HuhWhat />
+    element: <div>
+      <AppBar />
+      <HuhWhat />
+    </div>
   },
   {
     path: "/games",
-    element: <Games />
+    element: <div>
+      <AppBar />
+      <Games />
+    </div>
   },
   {
     path: "/about",
-    element: <About />
+    element: <div>
+      <AppBar />
+      <About />
+    </div>
   },
   {
     path: "/support",
-    element: <Support />
+    element: <div>
+      <AppBar />
+      <Support />
+    </div>
   },
   {
     path: "/potential",
-    element: <Home />
+    element: <div>
+      <AppBar />
+      <Home />
+    </div>
   }
-])
+], {
+  basename: "/nnw-dot-com-as-evidence"
+})
 
 const SiteContainer = styled('div')({
   display: "flex",
@@ -53,7 +73,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <SiteContainer>
-        <AppBar />
         <SiteContent>
           <RouterProvider router={router} />
         </SiteContent>
