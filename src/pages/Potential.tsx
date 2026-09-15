@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardHeader, CardContent, Collapse, Container, Grid, IconButton, IconButtonProps, Link, 
   Typography as TypographyBase
 } from '@mui/material'
+import { Link as RouterLink } from "react-router-dom"
 import {
   MicOffTwoTone as HeroIconBase,
   ChurchOutlined as StrategyIconBase,
@@ -411,7 +412,7 @@ const choices: Choice[] = [
     ]
   },{
     title: <>OK, strategy is nice -- what about planning?</>,
-    subHeader: <>See the <Link href="/games/">games we're planning now</Link>!</>,
+    subHeader: <>See the <Link component={RouterLink} to="/games">games we're planning now</Link>!</>,
     icon: <PlanningIcon color="success" />,
   }
 ]
