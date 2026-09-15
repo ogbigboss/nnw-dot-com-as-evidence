@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/nnw-dot-com-as-evidence/static/js/main.b70689bb.js",
+    "main.js": "/nnw-dot-com-as-evidence/static/js/main.561cbe30.js",
     "index.html": "/nnw-dot-com-as-evidence/index.html",
-    "main.b70689bb.js.map": "/nnw-dot-com-as-evidence/static/js/main.b70689bb.js.map"
+    "main.561cbe30.js.map": "/nnw-dot-com-as-evidence/static/js/main.561cbe30.js.map"
   },
   "entrypoints": [
-    "static/js/main.b70689bb.js"
+    "static/js/main.561cbe30.js"
   ]
 }
